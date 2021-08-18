@@ -1,0 +1,152 @@
+//<МИКСИНЫ>===============================================================================================
+@import "ui/_mixins";
+//</МИКСИНЫ>===============================================================================================
+
+//<Подключаем шрифты>=======================================================================================
+@import "ui/_fonts";
+//</Подключаем шрифты>=======================================================================================
+
+//<Подключаем переменные>=======================================================================================
+@import "_vars";
+//</Подключаем переменные>=======================================================================================
+
+//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+  font-size: 12px;
+}
+
+
+body {
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  font-family: $fontfamily;
+  font-weight: 400;
+  color: $darkColor;
+  background-color: $bodyColor;
+  margin: 0;
+  height: 100%;
+
+  @media (max-width:$md3+px) {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+.container {
+  max-width: $containerMaxWidth;
+  width: 100%;
+  padding: 0 $containerPadding;
+  margin: 0 auto;
+}
+
+//<ОБОЛОЧКА>===========================================================================================================
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  &.loaded {}
+}
+
+main {
+  flex: 1 1 auto;
+}
+
+
+
+
+//</ОБОЛОЧКА>===========================================================================================================
+
+//<ОСНОВНАЯ СЕТКА>===========================================================================================================
+
+.d-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mb124 {
+  @media (max-width:$md2+px) {
+    margin-bottom: 84px;
+  }
+
+  @media (min-width:$md2+px) {
+    margin-bottom: 124px;
+  }
+}
+
+.col {
+  flex: 0 1 50%;
+}
+
+//</ОСНОВНАЯ СЕТКА>===========================================================================================================
+
+
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+@import "ui/_scrollbar";
+@import "ui/_select";
+@import "ui/_btn";
+@import "ui/_simple-greed.scss";
+@import "blocks/_title";
+@import "blocks/_header";
+@import "blocks/_select";
+@import "blocks/_category-slider";
+@import "blocks/_search";
+@import "blocks/_checkbox";
+@import "blocks/_home";
+@import "blocks/_section";
+@import "blocks/_product";
+
+
+
+@import "blocks/_footer";
+
+
+@import "card/_card";
+@import "catalog/_page-catalog";

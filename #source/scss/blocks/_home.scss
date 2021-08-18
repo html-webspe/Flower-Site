@@ -1,0 +1,143 @@
+.home {
+   width: 100%;
+   background-image: url(../img/home/home-bg.png);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+
+   @media (max-width:$md1+px) {
+      padding-top: 80px;
+   }
+
+   @media (min-width:$md2+px) {
+      padding-top: 105px;
+   }
+
+   &__container {
+      padding: 0 24px;
+   }
+
+   &-body {
+      @media (min-width:$md3+px) {
+         display: flex;
+         flex-wrap: wrap;
+      }
+   }
+
+   &-col {
+      position: relative;
+
+      @media (min-width:$md4+px) and (max-width:$md3+px) {
+         text-align: center;
+      }
+
+      @media (min-width:$md3+px) {
+         flex-grow: 1;
+      }
+   }
+
+   &-col__left {
+      @media (max-width:$md3+px) {
+         margin-bottom: 24px;
+      }
+
+      @media (min-width:$md3+px) {
+         padding-top: 94px;
+      }
+   }
+
+   &-col__right {
+      @media (min-width:1400px) and (max-width:1700px) {
+         padding: 0 100px;
+      }
+   }
+
+   &__img {
+      @media (max-width:$md3+px) {
+         width: 336px;
+      }
+
+      @media (min-width:$md1+px) {
+         position: relative;
+         right: -50px;
+      }
+   }
+
+   &-col__select {
+      @media (max-width:$md3+px) {
+         max-width: 335px;
+         margin: 0 auto;
+      }
+   }
+
+   &__subtitle {
+      @media (max-width:$md3+px) {
+         margin-bottom: 18px;
+      }
+   }
+
+   &__decor {
+      position: absolute;
+      width: 100px;
+      height: 90px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      animation: sheet 2s ease infinite;
+
+      @media (max-width:$md2+px) {
+         display: none;
+      }
+   }
+
+   &__decor-1 {
+      background-image: url(../img/home/sheet-01.png);
+      right: -30px;
+      top: 150px;
+   }
+
+   &__decor-2 {
+      background-image: url(../img/home/sheet-02.png);
+      left: 50%;
+      bottom: 28%;
+
+      @media (max-width:$md3+px) {
+         display: none;
+      }
+   }
+
+   &__decor-3 {
+      background-image: url(../img/home/sheet-03.png);
+      top: 29px;
+      left: 42px;
+
+      @media (max-width:$md3+px) {
+         top: 84px;
+      }
+   }
+
+   &__decor-4 {
+      background-image: url(../img/home/sheet-04.png);
+      bottom: -36px;
+      right: -42px;
+      height: 70px;
+      animation: unset;
+   }
+}
+
+@media (min-width:$md1+px) {
+
+   @keyframes sheet {
+      0% {
+         transform: translateY(0);
+      }
+
+      50% {
+         transform: translateY(-10px);
+      }
+
+      100% {
+         transform: translateY(0);
+      }
+   }
+}

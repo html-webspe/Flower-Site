@@ -1,0 +1,40 @@
+.checkbox {
+   display: flex;
+   align-items: center;
+   font-size: 16px;
+
+   &__control {
+      display: inline-grid;
+      width: 16px;
+      height: 16px;
+      border: 2px solid $darkColorLight;
+
+      svg {
+         transition: transform 0.1s ease-in 25ms;
+         transform: scale(0);
+         transform-origin: bottom left;
+      }
+   }
+
+   &__input {
+      position: relative;
+      margin-right: 8px;
+
+      >* {
+         grid-area: checkbox;
+      }
+
+      input {
+         position: absolute;
+         top: 0;
+         left: 0;
+         opacity: 0;
+         width: 16px;
+         height: 16px;
+
+         &:checked+.checkbox__control svg {
+            transform: scale(1);
+         }
+      }
+   }
+}

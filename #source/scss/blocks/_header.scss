@@ -1,0 +1,281 @@
+//====================================================================================================
+.header {
+   position: relative;
+   width: 100%;
+   padding-left: 26px;
+   padding-right: 39px;
+   background-color: $whiteColor;
+   z-index: 1000;
+
+   &.fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+   }
+
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+
+      @media (max-width:$md3+px) {
+         height: $headerHeightMob;
+
+      }
+
+      @media (min-width:$md3+px) {
+         height: $headerHeight;
+      }
+   }
+
+   &__logo {
+      margin-right: 51px;
+      padding-top: 10px;
+   }
+
+   &__right {
+      align-items: center;
+   }
+
+   &__social {
+      @media (min-width:$md3+px) {
+         margin-left: 32px;
+         margin-right: 38px;
+      }
+
+      @media (min-width:$md1+px) {
+         margin-left: 64px;
+         margin-right: 77px;
+      }
+   }
+}
+
+//*  LOCZTION  *//
+.location {
+   font-size: 21px;
+   line-height: 26px;
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+
+   @media (max-width:$md3+px) {
+      margin: 32px 0;
+   }
+
+   &:before {
+      color: $acentColor;
+      margin-right: 18px;
+      font-size: 32px;
+      //filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+   }
+}
+
+//*  PHONE  *//
+.phone {
+   font-size: 21px;
+   line-height: 25px;
+
+   @media (max-width:$md2+px) {
+      margin-bottom: 32px;
+   }
+}
+
+//*  SOCIAL  *//
+.social {
+
+   &__item {
+      display: inline-block;
+
+      @media (max-width:$md3+px) {
+         margin-bottom: 24px;
+      }
+
+      &:not(:last-child) {
+         @media (min-width:$md1+px) {
+            margin-right: 40px;
+         }
+
+         @media (max-width:$md1+px) {
+            margin-right: 20px;
+         }
+      }
+   }
+
+   &__link {
+
+      &:before {
+
+
+         @media (max-width:$md1+px) {
+            font-size: 24px;
+         }
+
+         @media (min-width:$md1+px) {
+            font-size: 36px;
+         }
+
+         color: $acentColor;
+      }
+
+      &:hover {
+
+         &:before {
+            transition: color 0.3s ease 0s;
+            color: $acentColorBold;
+         }
+      }
+   }
+}
+
+//*  ACTION  *//
+.action {
+   display: flex;
+
+   @media (min-width:$md4+px) {
+      margin-right: 88px;
+   }
+
+   @media (min-width:$md1+px) {
+      margin-right: 129px;
+   }
+
+   &__user {
+      margin-right: 33px;
+      cursor: pointer;
+
+      &:before {
+         @media (max-width:$md1+px) {
+            font-size: 32px;
+         }
+
+         @media (min-width:$md1+px) {
+            font-size: 42px;
+         }
+      }
+   }
+
+   &__cart {
+      position: relative;
+      @extend .action__user;
+      margin-right: 0;
+
+      &:after {
+         content: '';
+         position: absolute;
+         top: -3px;
+         right: -8px;
+         width: 17px;
+         height: 17px;
+         background-color: $acentColorBold;
+         border-radius: 50%;
+      }
+   }
+}
+
+//*  HEADER MENU   *//
+.header-menu {
+   position: fixed;
+
+   right: -100%;
+   height: 100%;
+   transition: right 0.4s ease 0s;
+   background: rgba(0, 0, 0, 1);
+   padding: 80px 15px;
+
+   @media (max-width:$md3+px) {
+      width: 100%;
+      top: 58px;
+   }
+
+   @media (min-width:$md3+px) {
+      width: 50%;
+      top: 95px;
+   }
+
+   &.active {
+      right: 0;
+   }
+
+   &__list {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      color: $whiteColor;
+   }
+
+   &__item {
+      margin-bottom: 40px;
+   }
+
+   &__link {
+      color: $whiteColor;
+
+      @media (max-width:$md2+px) {
+         font-size: 26px;
+      }
+
+      @media (min-width:$md2+px) {
+         font-size: 36px;
+      }
+   }
+}
+
+//*  HEADER BURGER   *//
+.header-menu__icon {
+   display: block;
+   position: absolute;
+   top: 50%;
+   right: 39px;
+   width: 34px;
+   height: 20px;
+   transform: translateY(-50%);
+   cursor: pointer;
+   z-index: 5;
+
+   &:before,
+   &:after,
+   span {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 10%;
+      transition: all 0.3s ease 0s;
+      background-color: $darkColor;
+
+   }
+
+   &:before,
+   &:after {
+      content: '';
+   }
+
+   &:before {
+      top: 0;
+   }
+
+   &:after {
+      bottom: 0;
+   }
+
+   span {
+      top: 50%;
+      transform: scale(1) translate(0px, -50%);
+   }
+
+   &.active {
+      span {
+         transform: scale(0) translate(0px, -50%);
+      }
+
+      &:before {
+         top: 50%;
+         transform: rotate(-45deg) translate(0px, -50%);
+      }
+
+      &:after {
+         bottom: 50%;
+         transform: rotate(45deg) translate(0px, 50%);
+      }
+   }
+
+}

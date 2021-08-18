@@ -1,0 +1,42 @@
+.page-catalog {
+   .home {
+      height: 100vh;
+   }
+
+   .home__body {
+      padding: 0;
+   }
+
+   .home__col:nth-child(2) {
+      padding: 0;
+   }
+
+   .home__decor-2 {
+      left: 42%;
+      bottom: 19%;
+   }
+
+   .section__head {
+      justify-content: center;
+   }
+
+   .section__action {
+      display: none;
+   }
+
+   .product__wrapper {
+      flex-wrap: wrap;
+   }
+
+   .product__item {
+      margin-bottom: 64px;
+
+      @media (min-width:1400px) {
+         flex: 0 1 23%;
+
+         &:nth-child(n+4) {
+            margin-right: 0;
+         }
+      }
+   }
+}

@@ -1,0 +1,52 @@
+//<BUTTONS>====================================================================================================
+.btn {
+   display: inline-flex;
+   padding: 16px 79px;
+   background-color: $acentColor;
+   color: $whiteColor;
+   font-weight: bold;
+   border-radius: 50px;
+   box-shadow: 10px 10px 20px rgba(177, 164, 212, 0.35);
+   transition: background-color 0.3s ease 0s;
+
+   &:hover {
+      background-color: rgb(230, 107, 105);
+   }
+
+   @media (max-width:$md1+px) {
+      padding: 16px 40px;
+   }
+}
+
+
+.btn-action {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 50%;
+   background-color: $btnActionColor;
+   box-shadow: 10px 10px 20px rgba(177, 164, 212, 0.35), -10px -10px 10px rgba(255, 255, 255, 0.15);
+
+   @media (max-width:$md3+px) {
+      width: 46px;
+      height: 46px;
+      flex: 0 0 46px;
+   }
+
+   @media (min-width:$md3+px) {
+      width: 68px;
+      height: 68px;
+      flex: 0 0 68px;
+   }
+
+   &:before {
+      transform: rotate(-90deg);
+   }
+
+   &:hover {
+      box-shadow: 10px 10px 20px rgba(230, 107, 105, 0.35), -10px -10px 10px rgba(255, 255, 255, 0.15);
+      transition: box-shadow 0.5s ease 0s;
+   }
+}
+
+//</BUTTONS>====================================================================================================

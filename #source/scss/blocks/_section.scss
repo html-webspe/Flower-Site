@@ -1,0 +1,27 @@
+.section {
+   position: relative;
+   margin-bottom: 85px;
+
+   &__head {
+      @media (max-width:$md2+px) {
+         display: block;
+         margin-bottom: 34px;
+      }
+
+      @media (min-width:$md2+px) {
+         margin-bottom: 53px;
+      }
+
+   }
+
+
+   &__action {
+      @media (min-width:1700px) {
+         margin-right: -140px;
+      }
+
+      span {
+         margin-right: 32px;
+      }
+   }
+}
