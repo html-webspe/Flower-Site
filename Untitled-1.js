@@ -20,30 +20,7 @@ function scrollActive(){
     })
 }
 window.addEventListener('scroll', scrollActive)*/
-//====================  <!-- Fixed -->========================//
-const topOffset = document.querySelector('.wrapper');
 
-const positionFixed = (element, poinst) => {
-   window.addEventListener('scroll', () => {
-      let scrollDistens = window.scrollY;
-
-      const headerHeight = document.getElementById(element).offsetHeight;
-
-
-      const scrollPos = poinst,
-         elements = document.getElementById(element);
-
-      if (scrollDistens >= scrollPos) {
-         elements.classList.add('fixed');
-         topOffset.style.paddingTop = `${headerHeight}px`;
-      } else {
-         elements.classList.remove('fixed');
-         topOffset.style.paddingTop = null;
-      }
-   });
-}
-//====================  <!-- Header-Fixed -->========================//
-positionFixed('header', 1)
 
 //====================  <!-- Header-Fixed -->========================//
 //====================  <!-- Up -->========================//
@@ -105,23 +82,5 @@ document.querySelectorAll('.dropdawn-form__item-list').forEach(el => {
 
 
 
-/*   CARD SLIDER  */
-let cardSlider = new Swiper('.slider-block', {
-   //effect: "fade",
-});
-const sliderNavItem = document.querySelectorAll('.slider-nav__item');
 
-sliderNavItem.forEach((el, index) => {
-   el.setAttribute('data-index', index);
-
-   el.addEventListener('click', (e) => {
-      const index = parseInt(e.currentTarget.dataset.index);
-      cardSlider.slideTo(index);
-
-      document.querySelectorAll('.slider-nav__item').forEach((e) => {
-         e.classList.remove('active');
-      })
-      el.classList.add('active');
-   });
-})
 

@@ -1,0 +1,155 @@
+.main-delivery {
+   @media (max-width:$md3+px) {
+      padding-top: 32px;
+   }
+
+   @media (min-width:$md3+px) {
+      padding-top: 92px;
+   }
+}
+
+.s-delivery {
+   margin-bottom: 0;
+}
+
+.delivery {
+
+   &__container {
+      max-width: 1173px;
+   }
+
+   &__body {
+      @media (max-width:$md2+px) {
+         margin-bottom: 86px;
+      }
+
+      @media (min-width:$md2+px) {
+         padding-left: 100px;
+         margin-bottom: 167px;
+      }
+   }
+
+   &__item {
+      @media (max-width:$md3+px) {
+         &:not(:last-child) {
+            margin-bottom: 28px;
+         }
+      }
+
+      @media (min-width:$md3+px) {
+         &:not(:last-child) {
+            margin-bottom: 57px;
+         }
+      }
+   }
+
+   &__title {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: $acentColor;
+
+      @media (max-width:$md3+px) {
+         font-size: 18px;
+         line-height: 22px;
+         margin-bottom: 12px;
+      }
+
+      @media (min-width:$md3+px) {
+         font-size: 30px;
+         line-height: 37px;
+         margin-bottom: 23px;
+      }
+
+      &:before {
+         @media (max-width:$md3+px) {
+            font-size: 34px;
+            margin-right: 18px;
+         }
+
+         @media (min-width:$md3+px) {
+            font-size: 65px;
+            margin-right: 33px;
+         }
+
+
+         @media (min-width:$md2+px) {
+            margin-left: -100px;
+         }
+      }
+   }
+
+   p {
+      @media (max-width:$md3+px) {
+         &:not(:last-child) {
+            margin-bottom: 14px;
+         }
+
+         font-size: 14px;
+      }
+
+      @media (min-width:$md3+px) {
+         &:not(:last-child) {
+            margin-bottom: 29px;
+         }
+      }
+   }
+
+}
+
+.flowringo {
+   position: relative;
+   max-width: 660px;
+   margin: 0 auto;
+   padding-top: 60px;
+   background-color: $whiteColor;
+   text-align: center;
+   border-radius: 25px;
+
+
+   &__title {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      font-weight: 500;
+
+      text-transform: capitalize;
+      color: $acentColor;
+
+      @media (max-width:$md3+px) {
+         top: -44px;
+         font-size: 48px;
+         line-height: 55px;
+      }
+
+      @media (min-width:$md3+px) {
+         top: -92px;
+         font-size: 96px;
+         line-height: 117px;
+      }
+
+   }
+
+   &__desc {
+      font-weight: 600;
+      color: $acentColor;
+      margin-bottom: 53px;
+   }
+
+   &__btn {
+      @media (min-width:$md3+px) {
+         padding: 29px 59px;
+      }
+
+      margin-bottom: 50px;
+   }
+
+   img {
+      max-width: unset;
+      width: 1024px;
+      position: relative;
+      margin-left: -130px;
+      margin-bottom: -6px;
+   }
+}
