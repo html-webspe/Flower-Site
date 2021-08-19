@@ -1238,4 +1238,16 @@ document.addEventListener('DOMContentLoaded', function () {
 		directionlockdeadzone: 0,
 		cursorborder: "0px solid #fff"
 	});
+
+	/*====================   MAP  ====================*/
+
+	var center = [48.8866527839977, 2.34310679732974];
+
+	function init() {
+		var map = new ymaps.Map('map', {
+			center: center,
+			zoom: 17
+		});
+	}
+	ymaps.ready(init);
 });
