@@ -82,21 +82,7 @@ for (let i = 0; i < links.length; i++) {
 
 
 
-/*==================== FAVORITES ====================*/
-document.querySelectorAll(".product__favorite").forEach((item) =>
-   item.addEventListener('click', () => {
-      if (item.classList.contains('icon-favorites')) {
-         item.classList.remove('icon-favorites');
-         item.classList.add('icon-favorite-add');
 
-
-      } else {
-         item.classList.add('icon-favorites');
-         item.classList.remove('icon-favorite-add');
-      }
-   })
-)
-/*==================== //FAVORITES ====================*/
 
 /*
 let sliderProduct = new Swiper('.product__slider-container', {
@@ -115,23 +101,7 @@ document.querySelectorAll('.dropdawn-form__item-list').forEach(el => {
 });
 
 */
-/*   FORM DOWN  */
-let formDown = function () {
-   let formHeader = document.querySelectorAll('.search__form-item');
-   let formArrow = document.querySelectorAll('.search__form-arrow');
 
-   formArrow.forEach(item => {
-      item.addEventListener('click', formToggle)
-   });
-
-
-   function formToggle() {
-      this.parentElement.classList.toggle('is-active');
-      this.classList.toggle('is-active');
-   }
-};
-
-formDown();
 
 
 

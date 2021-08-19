@@ -58,3 +58,42 @@ if (body.classList.contains('main-body')) {
       categorySLider.slideNext();
    })
 }
+
+/*====================   FORM DROP  ====================*/
+
+document.querySelector('.search__form-arrow').addEventListener('click', formToggle)
+
+function formToggle() {
+   this.parentElement.classList.toggle('is-active');
+   this.classList.toggle('is-active');
+   $(".dropdawn-form__item-list").getNiceScroll().resize();
+}
+
+/*==================== FAVORITES ====================*/
+document.querySelectorAll(".product__favorite").forEach((item) =>
+   item.addEventListener('click', () => {
+      if (item.classList.contains('icon-favorites')) {
+         item.classList.remove('icon-favorites');
+         item.classList.add('icon-favorite-add');
+      } else {
+         item.classList.add('icon-favorites');
+         item.classList.remove('icon-favorite-add');
+      }
+   })
+)
+/*==================== //FAVORITES ====================*/
+
+/*====================   NiceScroll  ====================*/
+
+$(".dropdawn-form__item-list").niceScroll({
+   cursorcolor: "#777",
+   cursorwidth: "3px",
+   background: "",
+   autohidemode: false,
+   bouncescroll: false,
+   cursorborderradius: "0px",
+   scrollspeed: 100,
+   mousescrollstep: 50,
+   directionlockdeadzone: 0,
+   cursorborder: "0px solid #fff",
+});

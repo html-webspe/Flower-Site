@@ -32,15 +32,12 @@
 .section {
    &__title {
       max-width: unset;
+      color: $darkColorLight;
 
-      @media (max-width:$md3+px) {
+      @media (max-width:$md4+px) {
          margin-bottom: 24px;
          font-size: 32px;
          line-height: 42px;
-      }
-
-      @media (min-width:$md3+px) {
-         margin-bottom: 0;
       }
 
       @media (min-width:$md2+px) {

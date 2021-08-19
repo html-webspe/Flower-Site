@@ -102,7 +102,7 @@ if ($('select').length > 0) {
 
 			if ($(this).attr('data-type') == 'search') {
 				if (!$(this).hasClass('active')) {
-					searchselectreset();
+					//searchselectreset();
 				}
 				$(this).find('.select-options__value').show();
 			}
@@ -173,14 +173,14 @@ if ($('select').length > 0) {
 		if (!$(e.target).is(".select *") && !$(e.target).is(".select")) {
 			$('.select').removeClass('active');
 			$('.select-options').slideUp(50, function () { });
-			searchselectreset();
+			//searchselectreset();
 		};
 	});
 	$(document).on('keydown', function (e) {
 		if (e.which == 27) {
 			$('.select').removeClass('active');
 			$('.select-options').slideUp(50, function () { });
-			searchselectreset();
+			//searchselectreset();
 		}
 	});
 }

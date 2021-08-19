@@ -17,7 +17,6 @@
       }
    }
 
-
    &__form-item-input {
       position: relative;
       background: linear-gradient(90deg, #FBFBFB 0%, rgba(251, 251, 251, 0.61) 100%);
@@ -36,9 +35,6 @@
       @media (min-width:$md3+px) {
          padding: 16px 31px 16px 118px;
       }
-
-
-
    }
 
    &__form-icon {
@@ -138,6 +134,7 @@
       }
 
       li {
+
          @media (max-width:$md2+px) {
             margin-bottom: 10px;
          }
@@ -147,6 +144,11 @@
                margin-bottom: 24px;
             }
          }
+      }
+
+      .checkbox {
+         cursor: pointer;
+
       }
    }
 

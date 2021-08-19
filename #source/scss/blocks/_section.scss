@@ -1,19 +1,29 @@
 .section {
    position: relative;
-   margin-bottom: 85px;
+
+   @media (max-width:$md1+px) {
+      margin-bottom: 55px;
+   }
+
+   @media (min-width:$md1+px) {
+      margin-bottom: 85px;
+   }
 
    &__head {
       @media (max-width:$md2+px) {
-         display: block;
          margin-bottom: 34px;
+      }
+
+      @media (min-width:$md4+px) {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
       }
 
       @media (min-width:$md2+px) {
          margin-bottom: 53px;
       }
-
    }
-
 
    &__action {
       @media (min-width:1700px) {
@@ -23,5 +33,8 @@
       span {
          margin-right: 32px;
       }
+
+      display: flex;
+      align-items:center;
    }
 }

@@ -1006,7 +1006,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 				if ($(this).attr('data-type') == 'search') {
 					if (!$(this).hasClass('active')) {
-						searchselectreset();
+						//searchselectreset();
 					}
 					$(this).find('.select-options__value').show();
 				}
@@ -1075,14 +1075,14 @@ document.addEventListener('DOMContentLoaded', function () {
 			if (!$(e.target).is(".select *") && !$(e.target).is(".select")) {
 				$('.select').removeClass('active');
 				$('.select-options').slideUp(50, function () {});
-				searchselectreset();
+				//searchselectreset();
 			};
 		});
 		$(document).on('keydown', function (e) {
 			if (e.which == 27) {
 				$('.select').removeClass('active');
 				$('.select-options').slideUp(50, function () {});
-				searchselectreset();
+				//searchselectreset();
 			}
 		});
 	}
@@ -1158,4 +1158,43 @@ document.addEventListener('DOMContentLoaded', function () {
 			categorySLider.slideNext();
 		});
 	}
+
+	/*====================   FORM DROP  ====================*/
+
+	document.querySelector('.search__form-arrow').addEventListener('click', formToggle);
+
+	function formToggle() {
+		this.parentElement.classList.toggle('is-active');
+		this.classList.toggle('is-active');
+		$(".dropdawn-form__item-list").getNiceScroll().resize();
+	}
+
+	/*==================== FAVORITES ====================*/
+	document.querySelectorAll(".product__favorite").forEach(function (item) {
+		return item.addEventListener('click', function () {
+			if (item.classList.contains('icon-favorites')) {
+				item.classList.remove('icon-favorites');
+				item.classList.add('icon-favorite-add');
+			} else {
+				item.classList.add('icon-favorites');
+				item.classList.remove('icon-favorite-add');
+			}
+		});
+	});
+	/*==================== //FAVORITES ====================*/
+
+	/*====================   NiceScroll  ====================*/
+
+	$(".dropdawn-form__item-list").niceScroll({
+		cursorcolor: "#777",
+		cursorwidth: "3px",
+		background: "",
+		autohidemode: false,
+		bouncescroll: false,
+		cursorborderradius: "0px",
+		scrollspeed: 100,
+		mousescrollstep: 50,
+		directionlockdeadzone: 0,
+		cursorborder: "0px solid #fff"
+	});
 });
