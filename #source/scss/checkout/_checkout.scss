@@ -1,23 +1,63 @@
 .main-checkout {
-   padding-top: 90px;
+
+   @media (max-width:$md2+px) {
+      padding-top: 40px;
+   }
+
+   @media (min-width:$md2+px) {
+      padding-top: 90px;
+   }
 
    .section__title {
-      margin-bottom: 40px;
+      @media (max-width:$md3+px) {
+         margin-bottom: 16px;
+      }
+
+      @media (min-width:$md3+px) {
+         margin-bottom: 40px;
+      }
+   }
+
+   .product__count {
+      font-size: 22px;
+   }
+
+   .product__count-icon {
+      &:before {
+         @media (max-width:$md3+px) {
+            font-size: 14px;
+         }
+
+         @media (min-width:$md3+px) {
+            font-size: 22px;
+         }
+      }
    }
 }
 
 .basket {
    &__body {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
+      @media (min-width:$md3+px) {
+         display: flex;
+         justify-content: center;
+         flex-wrap: wrap;
+      }
+
+      @media (min-width:$md1+px) {
+         justify-content: space-between;
+      }
    }
 
    &__col {
       flex: 0 1 45%;
+      margin-bottom: 32px;
 
-      &:first-child {
-         margin-right: 24px;
+      @media (min-width:$md3+px) {
+         &:first-child {
+            margin-right: 24px;
+         }
+
+         margin-bottom: 95px;
       }
 
       &:last-child {
@@ -26,16 +66,32 @@
    }
 
    &__title {
-      font-size: 30px;
-      line-height: 37px;
-      margin-bottom: 30px;
+      @media (max-width:1200px) {
+         font-size: 16px;
+         line-height: 20px;
+         margin-bottom: 18px;
+      }
+
+      @media (min-width:1200px) {
+         font-size: 30px;
+         line-height: 37px;
+         margin-bottom: 30px;
+      }
    }
 
    &__product-price {
       font-weight: bold;
-      font-size: 30px;
-      line-height: 37px;
       color: $darkColorLight;
+
+      @media (max-width:1200px) {
+         font-size: 16px;
+         line-height: 18px;
+      }
+
+      @media (min-width:1200px) {
+         font-size: 30px;
+         line-height: 37px;
+      }
    }
 
    &__textarea {
@@ -51,8 +107,11 @@
    }
 
    &__btn {
-      margin-right: 109px;
-      padding: 29px 110px;
+
+      @media (min-width:$md1+px) {
+         margin-right: 109px;
+         padding: 29px 110px;
+      }
    }
 }
 
@@ -63,18 +122,29 @@
 .basket {
 
    &__item {
+      position: relative;
       background: $sliderItemColor;
       box-shadow: $boxShadow;
       border-radius: 25px;
    }
 
    &__item-box {
-      padding: 47px 40px;
+      @media (max-width:1200px) {
+         padding: 20px;
+      }
+
+      @media (min-width:1200px) {
+         padding: 40px;
+      }
 
       &:first-child {
          background: $sliderItemColor;
          box-shadow: $boxShadow;
          border-radius: 25px 25px 0px 0px;
+      }
+
+      .select-options__value {
+         font-size: 18px;
       }
    }
 
@@ -93,11 +163,21 @@
 
    &__item-img {
       position: relative;
-      flex: 0 0 94px;
-      width: 94px;
-      height: 94px;
       border-radius: 50%;
-      margin-right: 24px;
+
+      @media (max-width:1200px) {
+         flex: 0 0 66px;
+         width: 66px;
+         height: 66px;
+         margin-right: 14px;
+      }
+
+      @media (min-width:1200px) {
+         flex: 0 0 94px;
+         width: 94px;
+         height: 94px;
+         margin-right: 24px;
+      }
 
       img {
          position: absolute;
@@ -111,6 +191,12 @@
 
    &__item-info {
       width: 100%;
+
+      span {
+         @media (max-width:1200px) {
+            font-size: 14px;
+         }
+      }
    }
 
    &__item-info--group {
@@ -133,15 +219,31 @@
    &__promo {
       display: flex;
       align-items: center;
-      font-size: 18px;
       line-height: 22px;
       color: $darkColorLight;
-      margin-bottom: 24px;
+
+
+      @media (max-width:$md3+px) {
+         font-size: 14px;
+         margin-bottom: 14px;
+      }
+
+      @media (min-width:$md3+px) {
+         font-size: 18px;
+         margin-bottom: 24px;
+      }
 
       &:before {
-         font-size: 32px;
          margin-right: 12px;
          color: $acentColor;
+
+         @media (max-width:$md3+px) {
+            font-size: 20px;
+         }
+
+         @media (min-width:$md3+px) {
+            font-size: 32px;
+         }
       }
 
       span {
@@ -154,8 +256,17 @@
       align-items: center;
       justify-content: space-between;
 
-      &:not(:last-child) {
-         margin-bottom: 22px;
+
+      @media (max-width:$md2+px) {
+         &:not(:last-child) {
+            margin-bottom: 14px;
+         }
+      }
+
+      @media (min-width:$md3+px) {
+         &:not(:last-child) {
+            margin-bottom: 22px;
+         }
       }
    }
 
@@ -171,14 +282,27 @@
                         *******************************/
 .item-recipient {
 
+   &.active {
+      .item-recipient__time {
+         display: block;
+      }
+   }
+
    &__head {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 24px;
+      position: relative;
 
       .basket__title {
          margin-bottom: 0;
+      }
+
+      &.active {
+         .item-recipient__drop {
+            display: block !important;
+         }
       }
    }
 
@@ -186,18 +310,35 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 68px;
-      height: 68px;
       border-radius: 50%;
       background: #FAFAFA;
       mix-blend-mode: normal;
       box-shadow: $boxShadow;
+      cursor: pointer;
+
+      @media (max-width:$md2+px) {
+         width: 42px;
+         height: 42px;
+      }
+
+      @media (min-width:$md2+px) {
+         width: 68px;
+         height: 68px;
+      }
+
+      &.active {
+         &:before {
+            transition: transform 0.3s ease 0s;
+            transform: rotate(180deg);
+         }
+      }
    }
 
    &__body {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+
    }
 
    &__recipient {
@@ -212,14 +353,28 @@
    }
 
    &__input {
-      flex: 0 1 40%;
-      width: 40%;
       border-bottom: 1px solid #D6D7D9;
-      padding-bottom: 13px;
-      margin-bottom: 19px;
 
+      @media (max-width:$md3+px) {
+         padding-bottom: 9px;
+         margin-bottom: 12px;
+         width: 100%;
+
+      }
+
+      @media (min-width:$md3+px) {
+         padding-bottom: 13px;
+         margin-bottom: 19px;
+         flex: 0 1 40%;
+         width: 40%;
+      }
 
       input {
+         @media (max-width:$md3+px) {
+            font-size: 13px;
+            text-align: center;
+         }
+
          &::placeholder {
             color: #000;
          }
@@ -231,11 +386,64 @@
 
       .select-title {
          padding-right: 24px;
+
+         @media (max-width:$md3+px) {
+            padding-top: 0;
+            padding-bottom: 0;
+            margin-bottom: 0;
+         }
       }
 
       .select-title__arrow {
          &:before {
             font-size: 18px;
+         }
+      }
+   }
+
+   &__drop {
+      display: none;
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      padding: 34px 0px;
+      margin-top: 10px;
+      background: $sliderItemColor;
+      border-radius: 25px 25px 0px 0px;
+
+      @media (min-width:1200px) {
+         width: 116%;
+         left: -40px;
+         padding: 47px 40px;
+      }
+   }
+
+   &__drop-item {
+      position: relative;
+      padding: 15px 7px;
+      text-align: center;
+      background: #FDFCFF;
+      mix-blend-mode: normal;
+      box-shadow: $boxShadowInner;
+      border-radius: 55px;
+      margin-bottom: 34px;
+      cursor: pointer;
+
+      &:before {
+         position: absolute;
+         top: 50%;
+         transform: translateY(-50%);
+         color: $acentColor;
+
+         @media (max-width:$md3+px) {
+            left: 14px;
+            font-size: 12px;
+         }
+
+         @media (min-width:$md3+px) {
+            font-size: 16px;
+            left: 28px;
+
          }
       }
    }
@@ -253,31 +461,78 @@
 .postal {
    background: $btnActionColor;
    box-shadow: $boxShadow;
-   padding: 40px 57px;
    border-radius: 25px;
 
+   @media (max-width:$md2+px) {
+      padding: 20px;
+   }
+
+   @media (min-width:$md2+px) {
+      padding: 40px 57px;
+   }
+
    &__body {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
+      @media (min-width:$md3+px) {
+         display: flex;
+         justify-content: space-between;
+         flex-wrap: wrap;
+      }
    }
 
    &__col {
-      flex: 1 1 42%;
+      @media (max-width:$md2+px) {
+         &:first-child {
+            margin-bottom: 16px;
+         }
+      }
 
-      &:first-child {
-         margin-right: 94px;
-         margin-bottom: 40px;
+      @media (min-width:800px) {
+         flex: 1 1 42%;
+
+         &:first-child {
+            margin-right: 94px;
+            margin-bottom: 40px;
+         }
       }
    }
 
    &__col-check {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+
+      @media (max-width:$md2+px) {
+         flex-direction: column;
+      }
+
+      @media (min-width:$md2+px) {
+         justify-content: space-between;
+      }
    }
 
    &__check-box {
+      @media (max-width:$md2+px) {
+         display: flex;
+         flex-direction: column;
+         margin-bottom: 32px;
+      }
+   }
+}
+
+.basket {
+
+   &__label {
+      position: relative;
+      cursor: pointer;
+
+      @media (min-width:$md2+px) {
+         display: flex;
+         align-items: center;
+      }
+
+      &:first-child {
+         margin-bottom: 30px;
+      }
+
       input {
          position: absolute;
          top: 0;
@@ -295,33 +550,164 @@
       }
    }
 
-   &__label {
-      position: relative;
-      display: flex;
-      align-items: center;
-      cursor: pointer;
-
-      &:first-child {
-         margin-bottom: 30px;
-      }
-   }
-
    &__checkbox-control {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 50px;
-      height: 50px;
-      flex: 0 0 50px;
       border-radius: 50%;
+      text-align: center;
       background: $btnActionColor;
       box-shadow: $boxShadow;
-      margin-right: 28px;
+
+
+      @media (max-width:$md2+px) {
+         width: 27px;
+         height: 27px;
+         flex: 0 0 27px;
+         margin-right: 8px;
+      }
+
+      @media (min-width:$md2+px) {
+         width: 50px;
+         height: 50px;
+         flex: 0 0 50px;
+         margin-right: 28px;
+      }
 
       &:before {
+         @media (max-width:$md2+px) {
+            line-height: 27px;
+         }
+
+         @media (min-width:$md2+px) {
+            line-height: 50px;
+         }
+
          opacity: 0;
          color: $acentColor;
 
+      }
+   }
+}
+
+
+
+/*       OrderTime           */
+
+.item-recipient {
+
+   &__time {
+      display: none;
+      background-color: #fff;
+      box-shadow: $boxShadow;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      border-radius: 25px;
+      z-index: 5;
+
+      @media (max-width:$md2+px) {
+         padding: 24px 20px 24px;
+      }
+
+      @media (min-width:$md2+px) {
+         padding: 40px 40px 70px;
+      }
+   }
+}
+
+.time-order {
+
+   &__head {
+      display: flex;
+      margin-bottom: 32px;
+      justify-content: space-around;
+   }
+
+   &__head-item {
+      max-width: 179px;
+      font-weight: 500;
+      text-align: center;
+
+      &.active {
+         color: $acentColor;
+      }
+   }
+
+
+   &__body {}
+
+   &__body-item {
+      display: none;
+
+      &:last-child {
+         padding-top: 46px;
+      }
+
+      &.active {
+         display: block;
+      }
+   }
+
+   &__time {
+      text-align: center;
+      box-shadow: $boxShadowInner;
+      border-radius: 40px;
+      margin-bottom: 26px;
+
+      @media (max-width:$md3+px) {
+         font-size: 14px;
+         line-height: 16px;
+         padding: 10px 0;
+      }
+
+      @media (min-width:$md2+px) {
+         font-size: 18px;
+         line-height: 22px;
+         padding: 19px 0;
+      }
+   }
+
+   ul {
+      list-style-position: inside;
+      column-count: 2;
+   }
+}
+
+
+.time-order {
+
+   &__exact {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+
+   &__exact-item {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-weight: 500;
+      font-size: 64px;
+      line-height: 78px;
+      margin-bottom: 60px;
+
+
+
+      &:first-child {
+         margin-right: 110px;
+
+         &:after {
+            content: ':';
+            position: absolute;
+            top: 0;
+            right: -55px;
+         }
+      }
+
+      span {
+         font-weight: normal;
+         font-size: 24px;
+         line-height: 29px;
       }
    }
 }

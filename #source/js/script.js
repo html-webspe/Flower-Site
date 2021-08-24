@@ -203,14 +203,19 @@ let swiperHits;
 let swiperAuthor;
 let swiperComposition;
 let swiperPresents;
+let swiperCheckout;
+
+
 
 function resizeScrenn() {
    if ($(window).width() < 576.98) {
-      if ($(".product").length > 0) {
+      if ($(".main-page").length > 0) {
          document.querySelector('.product__hits-container').classList.add('swiper-container');
          document.querySelector('.product__author-container').classList.add('swiper-container');
          document.querySelector('.product__composition-container').classList.add('swiper-container');
          document.querySelector('.product__presents-container').classList.add('swiper-container');
+
+
 
          let productItem = document.querySelectorAll('.product__item');
          let productWrapper = document.querySelectorAll('.product__wrapper')
@@ -243,10 +248,28 @@ function resizeScrenn() {
             spaceBetween: 20,
             centeredSlides: true,
          })
+
+      }
+      if ($(".page-checkout").length > 0) {
+         document.querySelector('.product__checkout-container').classList.add('swiper-container');
+         let productItem = document.querySelectorAll('.product__item');
+         let productWrapper = document.querySelectorAll('.product__wrapper');
+
+         productWrapper.forEach((el) => {
+            el.classList.add('swiper-wrapper');
+         })
+         productItem.forEach((el) => {
+            el.classList.add('swiper-slide');
+         })
+
+         swiperCheckout = new Swiper('.product__checkout-container', {
+            slidesPerView: 'auto',
+            spaceBetween: 20,
+            centeredSlides: true,
+         })
       }
    }
 }
-
 
 resizeScrenn();
 
@@ -256,20 +279,104 @@ $(window).resize(function () {
 
 /*====================   deliveryAnimation  ====================*/
 
+if ($(".delivery__body-item--animation").length > 0) {
+   const scrollItems = document.querySelector('.delivery__body-item--animation');
 
-const scrollItems = document.querySelector('.delivery__body-item--animation');
+   const scrollAnimation = () => {
+      let windowCenter = (window.innerHeight / 2) + window.scrollY;
+      let scrollOffset = scrollItems.offsetTop + (scrollItems.offsetHeight / 2);
+      if (windowCenter >= scrollOffset) {
+         scrollItems.classList.add('active');
+      } else {
+         scrollItems.classList.remove('active');
+      }
+   };
 
-const scrollAnimation = () => {
-   let windowCenter = (window.innerHeight / 2) + window.scrollY;
-   let scrollOffset = scrollItems.offsetTop + (scrollItems.offsetHeight / 2);
-   if (windowCenter >= scrollOffset) {
-      scrollItems.classList.add('active');
-   } else {
-      scrollItems.classList.remove('active');
-   }
-};
-
-scrollAnimation();
-window.addEventListener('scroll', () => {
    scrollAnimation();
+   window.addEventListener('scroll', () => {
+      scrollAnimation();
+   });
+}
+
+/*====================   Другой Получатель  ====================*/
+let counter = 0;
+let flag = 1;
+
+$('.item-recipient__btn').click(function () {
+   $(this).toggleClass("active")
+   $(this).closest('.item-recipient__head').toggleClass("active")
+
+   $('.item-recipient__drop-item').click(function () {
+
+      $('.item-recipient__drop-item').css('border', '1px solid transparent');
+      $('.item-recipient__drop-item').removeClass('icon-check')
+      $(this).css('border', '1px solid red');
+      $(this).addClass('icon-check')
+
+      $('.item-recipient__recipient').html($(this).text());
+      $('.item-recipient__recipient').css('color', '');
+
+      $(this).closest('.item-recipient__head').removeClass("active");
+      $(this).closest('.item-recipient__head').find('.item-recipient__btn').removeClass("active");
+
+      if ($(this).hasClass('another')) {
+         if (counter <= 0) {
+            $(this).closest('.item-recipient').find(".item-recipient__body").append('<div class="item-recipient__input"><input type="text" placeholder="Имя получателя"></div> <div class="item-recipient__input"><input type="text" placeholder="Тел. получателя"></div>');
+            counter++;
+            flag = 0;
+         }
+      } else {
+         if (flag <= 0) {
+            $('.item-recipient .item-recipient__input').slice(-2).remove();
+            flag++;
+            counter = 0;
+         }
+      }
+   });
+
 });
+
+if ($('.item-recipient__recipient').html() == '') {
+   $('.item-recipient__recipient').html('Получатель не указан');
+   $('.item-recipient__recipient').css('color', '#FF0000');
+}
+
+
+
+$('.item-recipient__input-time').click(function () {
+   $(this).closest('.basket__item-recipient').toggleClass("active")
+
+   $('.time-order__time').click(function () {
+      $('.item-recipient__input-time input').val($(this).text());
+
+      $(this).closest('.basket__item-recipient').removeClass("active");
+   });
+});
+
+
+
+const tabsBtn = document.querySelectorAll(".time-order__head-item");
+const tabsItems = document.querySelectorAll(".time-order__body-item");
+
+tabsBtn.forEach(onTabClick);
+
+function onTabClick(item) {
+   item.addEventListener("click", function () {
+      let currentBtn = item;
+      let tabId = currentBtn.getAttribute("data-tab");
+      let currentTab = document.querySelector(tabId);
+
+      if (!currentBtn.classList.contains('active')) {
+         tabsBtn.forEach(function (item) {
+            item.classList.remove('active');
+         });
+
+         tabsItems.forEach(function (item) {
+            item.classList.remove('active');
+         });
+
+         currentBtn.classList.add('active');
+         currentTab.classList.add('active');
+      }
+   });
+}
