@@ -1,0 +1,7 @@
+.page-catalog {
+   .product__item {
+      @media (min-width:1200px) {
+         margin-bottom: 32px;
+      }
+   }
+}

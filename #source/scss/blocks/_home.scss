@@ -4,6 +4,7 @@
    background-repeat: no-repeat;
    background-size: cover;
    background-position: center;
+   height: 100vh;
 
    @media (max-width:$md1+px) {
       padding-top: 80px;
@@ -100,6 +101,7 @@
       background-image: url(../img/home/sheet-02.png);
       left: 50%;
       bottom: 28%;
+      width: 142px;
 
       @media (max-width:$md3+px) {
          display: none;

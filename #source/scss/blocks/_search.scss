@@ -126,14 +126,10 @@
       @media (min-width:$md3+px) {
          flex: 0 1 250px;
          margin-bottom: 44px;
-
-         &:last-child {
-            flex: 0 1 150px;
-
-         }
       }
 
       li {
+         font-size: 16px;
 
          @media (max-width:$md2+px) {
             margin-bottom: 10px;
@@ -168,3 +164,8 @@
       margin-bottom: 24px;
    }
 }
+
+
+/*******************************************************/
+///
+/*! nouislider - 14.6.2 - 9/16/2020 */

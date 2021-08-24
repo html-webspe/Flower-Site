@@ -24,9 +24,12 @@
    }
 }
 
-.header {
-   &.fixed {
-      position: fixed;
-      z-index: 1000;
-   }
+
+input {
+   border: unset;
+   padding: 0;
+   margin: 0;
+   outline: unset;
+   width: 100%;
+   background: transparent;
 }

@@ -40,9 +40,8 @@ if (iconMenu) {
 
 /*==================== CATEGORY__SLIDER ====================*/
 
-const body = document.querySelector('body');
 
-if (body.classList.contains('main-body')) {
+if (document.querySelector('.category__slider-container')) {
    let categorySLider = new Swiper('.category__slider-container', {
       slidesPerView: 1,
       loop: true,
@@ -144,7 +143,7 @@ $(".dropdawn-form__item-list").niceScroll({
 });
 
 /*====================   MAP  ====================*/
-
+/*
 let center = [48.8866527839977, 2.34310679732974];
 
 function init() {
@@ -154,3 +153,123 @@ function init() {
    });
 }
 ymaps.ready(init);
+
+/*====================   RENG  ====================*/
+const rangeSlider = document.getElementById('range-slider');
+
+if (rangeSlider) {
+   noUiSlider.create(rangeSlider, {
+      start: [0, 75000],
+      connect: true,
+      step: 1,
+      range: {
+         'min': [0],
+         'max': [75000]
+      },
+      handleAttributes: [
+         { 'class': 'ff' },
+         { 'class': 'gg' },
+      ],
+   });
+
+   const input0 = document.getElementById('input-0');
+   const input1 = document.getElementById('input-1');
+   const inputs = [input0, input1];
+
+   rangeSlider.noUiSlider.on('update', function (values, handle) {
+      inputs[handle].value = Math.round(values[handle]);
+   });
+
+   const setRangeSlider = (i, value) => {
+      let arr = [null, null];
+      arr[i] = value;
+
+      console.log(arr);
+
+      rangeSlider.noUiSlider.set(arr);
+   };
+
+   inputs.forEach((el, index) => {
+      el.addEventListener('change', (e) => {
+         console.log(index);
+         setRangeSlider(index, e.currentTarget.value);
+      });
+   });
+}
+
+/*====================   Product Slider  ====================*/
+
+let swiperHits;
+let swiperAuthor;
+let swiperComposition;
+let swiperPresents;
+
+function resizeScrenn() {
+   if ($(window).width() < 576.98) {
+      if ($(".product").length > 0) {
+         document.querySelector('.product__hits-container').classList.add('swiper-container');
+         document.querySelector('.product__author-container').classList.add('swiper-container');
+         document.querySelector('.product__composition-container').classList.add('swiper-container');
+         document.querySelector('.product__presents-container').classList.add('swiper-container');
+
+         let productItem = document.querySelectorAll('.product__item');
+         let productWrapper = document.querySelectorAll('.product__wrapper')
+
+         productWrapper.forEach((el) => {
+            el.classList.add('swiper-wrapper');
+         })
+         productItem.forEach((el) => {
+            el.classList.add('swiper-slide');
+         })
+
+         swiperHits = new Swiper('.product__hits-container', {
+            slidesPerView: 'auto',
+            spaceBetween: 20,
+            centeredSlides: true,
+         })
+
+         swiperAuthor = new Swiper('.product__author-container', {
+            slidesPerView: 'auto',
+            spaceBetween: 20,
+            centeredSlides: true,
+         })
+         swiperComposition = new Swiper('.product__composition-container', {
+            slidesPerView: 'auto',
+            spaceBetween: 20,
+            centeredSlides: true,
+         })
+         swiperPresents = new Swiper('.product__presents-container', {
+            slidesPerView: 'auto',
+            spaceBetween: 20,
+            centeredSlides: true,
+         })
+      }
+   }
+}
+
+
+resizeScrenn();
+
+$(window).resize(function () {
+   resizeScrenn();
+});
+
+/*====================   deliveryAnimation  ====================*/
+
+
+const scrollItems = document.querySelector('.delivery__body-item--animation');
+
+const scrollAnimation = () => {
+   let windowCenter = (window.innerHeight / 2) + window.scrollY;
+   let scrollOffset = scrollItems.offsetTop + (scrollItems.offsetHeight / 2);
+   if (windowCenter >= scrollOffset) {
+      scrollItems.classList.add('active');
+   } else {
+      scrollItems.classList.remove('active');
+   }
+};
+
+scrollAnimation();
+window.addEventListener('scroll', () => {
+   scrollAnimation();
+});

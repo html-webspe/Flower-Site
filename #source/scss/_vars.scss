@@ -22,6 +22,12 @@ $footerColor:#333637;
 $headerHeight:102px;
 $headerHeightMob:58px;
 
+$boxShadow:10px 10px 20px rgba(177, 164, 212, 0.35),
+-10px -10px 10px rgba(255, 255, 255, 0.15);
+
+$boxShadowInner:-10px -10px 10px rgba(255, 255, 255, 0.15),
+inset 10px 0px 20px rgba(177, 164, 212, 0.15);
+
 $md1: 1400;
 $md2: 992.98;
 $md3: 767.98;

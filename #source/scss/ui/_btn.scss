@@ -18,6 +18,21 @@
    }
 }
 
+.btn-white {
+   background-color: #fff;
+   border: 1px solid $acentColor;
+   color: $acentColor;
+   padding: 12px 19px;
+   box-shadow: unset;
+   font-size: 14px;
+   line-height: 17px;
+   transition: background 0.3s ease 0s;
+
+   &:hover {
+      background-color: $acentColor;
+      color: #fff;
+   }
+}
 
 .btn-action {
    display: flex;

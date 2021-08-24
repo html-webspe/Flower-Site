@@ -5,13 +5,11 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 //@prepros-append jq-start.js
 
 //@prepros-append components/dynamic_adapt.js
-
 //@prepros-append components/jquery.nicescroll.min.js
 //@prepros-append components/select.js
 
 
 //@prepros-append script.js
-
 //@prepros-append jq-end.js
 document.addEventListener('DOMContentLoaded', function () {
 	// HTML data-da="where(uniq class name),position(digi),when(breakpoint)"
@@ -1139,9 +1137,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	/*==================== CATEGORY__SLIDER ====================*/
 
-	var body = document.querySelector('body');
-
-	if (body.classList.contains('main-body')) {
+	if (document.querySelector('.category__slider-container')) {
 		var formToggle = function formToggle() {
 			this.parentElement.classList.toggle('is-active');
 			this.classList.toggle('is-active');
@@ -1240,14 +1236,129 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 
 	/*====================   MAP  ====================*/
+	/*
+ let center = [48.8866527839977, 2.34310679732974];
+ 
+ function init() {
+    let map = new ymaps.Map('map', {
+       center: center,
+       zoom: 17
+    });
+ }
+ ymaps.ready(init);
+ 
+ /*====================   RENG  ====================*/
+	var rangeSlider = document.getElementById('range-slider');
 
-	var center = [48.8866527839977, 2.34310679732974];
+	if (rangeSlider) {
+		noUiSlider.create(rangeSlider, {
+			start: [0, 75000],
+			connect: true,
+			step: 1,
+			range: {
+				'min': [0],
+				'max': [75000]
+			},
+			handleAttributes: [{ 'class': 'ff' }, { 'class': 'gg' }]
+		});
 
-	function init() {
-		var map = new ymaps.Map('map', {
-			center: center,
-			zoom: 17
+		var input0 = document.getElementById('input-0');
+		var input1 = document.getElementById('input-1');
+		var inputs = [input0, input1];
+
+		rangeSlider.noUiSlider.on('update', function (values, handle) {
+			inputs[handle].value = Math.round(values[handle]);
+		});
+
+		var setRangeSlider = function setRangeSlider(i, value) {
+			var arr = [null, null];
+			arr[i] = value;
+
+			console.log(arr);
+
+			rangeSlider.noUiSlider.set(arr);
+		};
+
+		inputs.forEach(function (el, index) {
+			el.addEventListener('change', function (e) {
+				console.log(index);
+				setRangeSlider(index, e.currentTarget.value);
+			});
 		});
 	}
-	ymaps.ready(init);
+
+	/*====================   Product Slider  ====================*/
+
+	var swiperHits = void 0;
+	var swiperAuthor = void 0;
+	var swiperComposition = void 0;
+	var swiperPresents = void 0;
+
+	function resizeScrenn() {
+		if ($(window).width() < 576.98) {
+			if ($(".product").length > 0) {
+				document.querySelector('.product__hits-container').classList.add('swiper-container');
+				document.querySelector('.product__author-container').classList.add('swiper-container');
+				document.querySelector('.product__composition-container').classList.add('swiper-container');
+				document.querySelector('.product__presents-container').classList.add('swiper-container');
+
+				var productItem = document.querySelectorAll('.product__item');
+				var productWrapper = document.querySelectorAll('.product__wrapper');
+
+				productWrapper.forEach(function (el) {
+					el.classList.add('swiper-wrapper');
+				});
+				productItem.forEach(function (el) {
+					el.classList.add('swiper-slide');
+				});
+
+				swiperHits = new Swiper('.product__hits-container', {
+					slidesPerView: 'auto',
+					spaceBetween: 20,
+					centeredSlides: true
+				});
+
+				swiperAuthor = new Swiper('.product__author-container', {
+					slidesPerView: 'auto',
+					spaceBetween: 20,
+					centeredSlides: true
+				});
+				swiperComposition = new Swiper('.product__composition-container', {
+					slidesPerView: 'auto',
+					spaceBetween: 20,
+					centeredSlides: true
+				});
+				swiperPresents = new Swiper('.product__presents-container', {
+					slidesPerView: 'auto',
+					spaceBetween: 20,
+					centeredSlides: true
+				});
+			}
+		}
+	}
+
+	resizeScrenn();
+
+	$(window).resize(function () {
+		resizeScrenn();
+	});
+
+	/*====================   deliveryAnimation  ====================*/
+
+	var scrollItems = document.querySelector('.delivery__body-item--animation');
+
+	var scrollAnimation = function scrollAnimation() {
+		var windowCenter = window.innerHeight / 2 + window.scrollY;
+		var scrollOffset = scrollItems.offsetTop + scrollItems.offsetHeight / 2;
+		if (windowCenter >= scrollOffset) {
+			scrollItems.classList.add('active');
+		} else {
+			scrollItems.classList.remove('active');
+		}
+	};
+
+	scrollAnimation();
+	window.addEventListener('scroll', function () {
+		scrollAnimation();
+	});
 });

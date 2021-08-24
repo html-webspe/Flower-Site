@@ -56,7 +56,7 @@ button {
   background-color: transparent;
   cursor: pointer;
   padding: 0;
-  font-size: 12px;
+  cursor: pointer;
 }
 
 
@@ -125,14 +125,19 @@ main {
   flex: 0 1 50%;
 }
 
+.bold {
+  font-weight: 600;
+}
+
 //</ОСНОВНАЯ СЕТКА>===========================================================================================================
 
 
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+@import "ui/_ui";
 @import "ui/_scrollbar";
 @import "ui/_btn";
 @import "ui/_simple-greed.scss";
-
+@import "ui/_range.scss";
 
 @import "blocks/_title";
 @import "blocks/_header";
@@ -143,7 +148,7 @@ main {
 @import "blocks/_home";
 @import "blocks/_section";
 @import "blocks/_product";
-
+@import "blocks/_reange";
 
 
 @import "blocks/_footer";
@@ -151,3 +156,5 @@ main {
 
 @import "card/_card";
 @import "delivery/_delivery";
+@import "catalog/_page-catalog";
+@import "checkout/_checkout";

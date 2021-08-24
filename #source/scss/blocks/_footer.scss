@@ -83,6 +83,12 @@
    &__col {
       position: relative;
 
+      @media (min-width:$md3+px) {
+         &:not(:last-child) {
+            margin-right: 20px;
+         }
+      }
+
       @media (max-width:$md3+px) {
          &:not(:last-child) {
             margin-bottom: 70px;
