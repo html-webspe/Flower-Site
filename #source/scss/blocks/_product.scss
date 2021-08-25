@@ -142,6 +142,10 @@
       mix-blend-mode: normal;
       box-shadow: $boxShadow;
 
+      @media (max-width:$md4+px) {
+         margin-right: 10px;
+      }
+
       &:before {
          font-size: 18px;
          padding-right: 1px;
