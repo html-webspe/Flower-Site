@@ -2719,6 +2719,19 @@ input[type=number] {
   .page-catalog .product__item {
     margin-bottom: 32px; } }
 
+@media (max-width: 576.98px) {
+  .page-catalog .product__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-left: 0; }
+  .page-catalog .product__item {
+    margin-bottom: 32px; } }
+
 @media (max-width: 992.98px) {
   .main-checkout {
     padding-top: 40px; } }
