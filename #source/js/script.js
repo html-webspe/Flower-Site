@@ -382,6 +382,12 @@ function onTabClick(item) {
 }
 
 
-$('.select-form__group--filters').click(function () {
-   $(this).toggleClass("active")
-})
+$('.filters__btn ').click(function () {
+   $(this).closest('.select-form__group--filters').toggleClass("active")
+   let f = $('#input-0').val();
+   let g = $('#input-1').val();
+   $('.select-form__group--input').val(f + '-' + g + ' p');
+   if ($(window).width() > 967.98) {
+      $(".select-form__group--filters").width('20%');
+   }
+});
