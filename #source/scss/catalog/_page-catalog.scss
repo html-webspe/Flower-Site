@@ -1,8 +1,23 @@
 .page-catalog {
+
+   &__main {
+      @media (max-width:$md1+px) {
+         padding-top: 60px;
+      }
+
+      @media (min-width:$md1+px) {
+         padding-top: 112px;
+      }
+   }
+
    .product__item {
       @media (min-width:1200px) {
          margin-bottom: 32px;
       }
+   }
+
+   .select-form {
+      margin-bottom: 89px;
    }
 
    @media (max-width:$md4+px) {

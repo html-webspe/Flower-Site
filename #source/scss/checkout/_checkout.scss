@@ -365,8 +365,8 @@
       @media (min-width:$md3+px) {
          padding-bottom: 13px;
          margin-bottom: 19px;
-         flex: 0 1 40%;
-         width: 40%;
+         flex: 0 1 45%;
+         width: 45%;
       }
 
       input {
@@ -412,9 +412,7 @@
       border-radius: 25px 25px 0px 0px;
 
       @media (min-width:1200px) {
-         width: 116%;
-         left: -40px;
-         padding: 47px 40px;
+         padding: 40px 40px;
       }
    }
 
@@ -518,7 +516,7 @@
    }
 }
 
-.basket {
+.checkbox {
 
    &__label {
       position: relative;
@@ -550,7 +548,7 @@
       }
    }
 
-   &__checkbox-control {
+   &__control {
       border-radius: 50%;
       text-align: center;
       background: $btnActionColor;
@@ -574,10 +572,12 @@
       &:before {
          @media (max-width:$md2+px) {
             line-height: 27px;
+            font-size: 12px;
          }
 
          @media (min-width:$md2+px) {
             line-height: 50px;
+            font-size: 16px;
          }
 
          opacity: 0;

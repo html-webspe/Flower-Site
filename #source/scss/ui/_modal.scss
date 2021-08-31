@@ -25,7 +25,6 @@
 
 .modal__body {
    position: relative;
-   width: 1000px;
    margin: 50px auto;
    display: none;
    vertical-align: middle;
@@ -73,9 +72,7 @@
    transition: opacity var(--transition-time), transform var(--transition-time);
 }
 
-*:focus {
-   outline: 3px red solid;
-}
+
 
 .disable-scroll {
    position: relative;
@@ -85,4 +82,19 @@
    left: 0;
    top: 0;
    width: 100%;
+}
+
+.modal-close {
+   position: absolute;
+   top: 37px;
+   right: 40px;
+
+   @media (max-width:$md3+px) {
+      top: 14px;
+      right: 17px;
+   }
+
+   &:before {
+      color: #E6E6E6;
+   }
 }

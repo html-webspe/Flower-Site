@@ -11,12 +11,61 @@ input[type=number] {
 }
 
 .search-filters {
-   max-width: 350px;
+   display: none;
+   position: absolute;
+   right: -98px;
+   top: 44px;
+   width: 450px;
+   height: 205px;
+   padding: 26px;
+   background: #FFFFFF;
+   box-shadow: 10px 10px 20px rgba(201, 213, 235, 0.5);
+   border-radius: 25px;
+   z-index: 3;
+
+   @media (max-width:$md3+px) {
+      right: 0;
+      width: 100%;
+   }
 }
 
 .filters {
+   &__btn {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: center;
 
-   &__item {}
+      @media (max-width:$md3+px) {
+         border: 1px solid #fff;
+         border-radius: 150px;
+         background-color: #fff;
+         padding: 12px 20px;
+         font-size: 14px;
+         margin-bottom: 12px;
+         justify-content: space-between;
+      }
+
+      &:before {
+         font-size: 14px;
+         margin-left: 18px;
+      }
+   }
+}
+
+.select-form__group--filters {
+   &.active {
+      .search-filters {
+         display: block;
+      }
+
+      .filters__btn {
+         &:before {
+            transition: transform 0.3s ease 0s;
+            transform: rotate(180deg);
+         }
+      }
+   }
 }
 
 .filters-price {
@@ -30,7 +79,7 @@ input[type=number] {
    &__inputs {
       display: flex;
       align-items: center;
-      margin-bottom: 91px;
+      margin-bottom: 71px;
    }
 
    &__label {
@@ -63,6 +112,7 @@ input[type=number] {
       svg {
          position: absolute;
          bottom: 99%;
+         left: 0;
       }
    }
 }

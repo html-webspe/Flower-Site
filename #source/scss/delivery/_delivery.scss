@@ -31,6 +31,7 @@
 .delivery-decor {
    position: absolute;
    width: 148px;
+   animation: sheet 2s ease infinite;
 
    &-1 {
       top: 220px;

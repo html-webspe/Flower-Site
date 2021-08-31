@@ -138,13 +138,15 @@ main {
 @import "ui/_btn";
 @import "ui/_simple-greed.scss";
 @import "ui/_range.scss";
+@import "ui/_modal.scss";
+
+@import "blocks/_quick-order";
 
 @import "blocks/_title";
 @import "blocks/_header";
 @import "blocks/_select";
 @import "blocks/_category-slider";
 @import "blocks/_search";
-@import "blocks/_checkbox";
 @import "blocks/_home";
 @import "blocks/_section";
 @import "blocks/_product";

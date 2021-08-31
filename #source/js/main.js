@@ -3,6 +3,8 @@
 //@prepros-append components/dynamic_adapt.js
 //@prepros-append components/jquery.nicescroll.min.js
 //@prepros-append components/select.js
+//@prepros-append components/modal.js
+
 
 
 

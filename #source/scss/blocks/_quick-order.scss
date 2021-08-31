@@ -1,0 +1,120 @@
+.quick-order {
+   max-width: 630px;
+   margin: 0 auto;
+   padding: 60px 40px 40px 40px;
+   border-radius: 25px;
+   background-color: #fff;
+
+   @media (max-width:$md3+px) {
+      padding: 30px 16px;
+   }
+
+   &__body {
+      position: relative;
+   }
+
+   &__title {
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 44px;
+      color: $acentColor;
+      text-align: center;
+      margin-bottom: 37px;
+
+      @media (max-width:$md3+px) {
+         font-size: 26px;
+         line-height: 32px;
+         margin-bottom: 17px;
+      }
+   }
+
+   &__product-item {
+      @media (max-width:$md3+px) {
+         margin-bottom: 17px;
+      }
+
+      @media (min-width:$md3+px) {
+         display: flex;
+         justify-content: flex-start;
+         align-items: center;
+         margin-bottom: 57px;
+      }
+   }
+
+   &__product-item--img {
+      position: relative;
+      flex: 0 0 93px;
+      width: 93px;
+      height: 93px;
+      border-radius: 50%;
+
+      @media (max-width:$md3+px) {
+         margin: 0 auto;
+         margin-bottom: 17px;
+      }
+
+      @media (min-width:$md3+px) {
+         margin-right: 34px;
+      }
+
+      img {
+         border-radius: 50%;
+         position: absolute;
+         top: 0;
+         left: 0;
+         height: 100%;
+         width: 100%;
+      }
+   }
+
+   &__product-item--name {
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 37px;
+      color: #5B5F60;
+
+      @media (max-width:$md3+px) {
+         font-size: 22px;
+         line-height: 26px;
+      }
+   }
+
+   &__text {
+      margin-bottom: 37px;
+      text-align: center;
+   }
+
+   &__form-imput {
+      &:not(:last-child) {
+         margin-bottom: 20px;
+      }
+
+      input {
+         padding: 19px 0px 19px 50px;
+         background: #FDFCFF;
+         box-shadow: $boxShadowInner;
+         border-radius: 55px;
+      }
+   }
+
+   &__form-btn {
+      width: 100%;
+      text-align: center;
+      justify-content: center;
+      box-shadow: 10px 10px 20px rgba(177, 164, 212, 0.35);
+      margin-bottom: 33px;
+
+      @media (min-width:$md3+px) {
+         padding-top: 25px;
+         padding-bottom: 25px;
+      }
+
+   }
+
+   &__bonus {
+      @media (min-width:$md3+px) {
+         display: flex;
+         justify-content: space-between;
+      }
+   }
+}
