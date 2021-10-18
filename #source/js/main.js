@@ -4,6 +4,8 @@
 //@prepros-append components/jquery.nicescroll.min.js
 //@prepros-append components/select.js
 //@prepros-append components/modal.js
+//@prepros-append components/form.js
+
 
 
 

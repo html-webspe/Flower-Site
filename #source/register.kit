@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <title>Регистрация</title>
+   <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+   <meta name="format-detection" content="telephone=no">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+   <link rel="stylesheet" href="css/normalize.css">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="shortcut icon" href="favicon.ico">
+
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+</head>
+
+<body>
+   <div class="wrapper">
+      <!-- @import "html/header.html" -->
+
+      <main class="main-register ">
+         <div class="register">
+            <div class="register-body">
+               <div class="register-col register-col__img"></div>
+               <div class="register-col register-col__form">
+                  <div class="register-col__form--inner">
+                     <h2 class="register__title">Регистрация</h2>
+                     <p class="register__text">Начните с создания учетной записи </p>
+
+
+
+                     <form action="#" class="register-form js-form-validate">
+                        <label class="register-label js-field">
+                           <span class="register-label__row">Ваше имя*</span>
+                           <input type="text" class="register-label__input input" name="user-name"
+                              placeholder="Введите ваше имя" data-validate>
+                           <span class="login-label__error">Обязательно к заполнению</span>
+                        </label>
+                        <label class="register-label js-field">
+                           <span class="register-label__row">E-mail</span>
+                           <input type="email" class="register-label__input input" name="email" placeholder="Е-mail"
+                              data-validate>
+                           <span class="login-label__error">Обязательно к заполнению</span>
+                        </label>
+                        <label class="register-label js-field">
+                           <span class="register-label__row">Номер телефона* </span>
+                           <input type="tel" class="register-label__input input" name="tel"
+                              placeholder="+7 (8352) 21-71-61" data-validate>
+                           <span class="login-label__error">Обязательно к заполнению</span>
+                        </label>
+                        <label class="register-label js-field">
+                           <span class="register-label__row">Пароль</span>
+                           <input type="password" class="register-label__input input" name="password"
+                              placeholder="Введите пароль" data-validate>
+                           <span class="login-label__error">Обязательно к заполнению</span>
+
+                        </label>
+                        <label class="register-label js-field">
+                           <span class="register-label__row">Повторите пароль</span>
+                           <input type="password" class="register-label__input input" name="password"
+                              placeholder="Введите пароль еще раз" data-validate>
+                           <span class="login-label__error">Обязательно к заполнению</span>
+
+                        </label>
+                        <p class="login-or-register">Уже зарегистрированы? <a href="login.html">Войти тут</a> </p>
+                        <button class="btn register__btn">Зарегистрироваться</button>
+                     </form>
+                  </div>
+
+
+
+
+               </div>
+            </div>
+         </div>
+   </div>
+   </main>
+   <!-- @import "html/footer.html" -->
+   <!-- @import "html/iu/modal.html" -->
+   </div>
+   <!-- @import "html/iu/js.html" -->
+</body>
+
+</html>

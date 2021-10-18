@@ -636,15 +636,13 @@
    &__body {}
 
    &__body-item {
-      display: none;
+
 
       &:last-child {
          padding-top: 46px;
       }
 
-      &.active {
-         display: block;
-      }
+
    }
 
    &__time {

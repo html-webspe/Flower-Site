@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <title>Войти</title>
+   <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+   <meta name="format-detection" content="telephone=no">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+   <link rel="stylesheet" href="css/normalize.css">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="shortcut icon" href="favicon.ico">
+
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+</head>
+
+<body>
+   <div class="wrapper">
+      <!-- @import "html/header.html" -->
+
+      <main class="main-login ">
+         <div class="login">
+            <div class="login-body">
+               <div class="login-col login-col__img"></div>
+               <div class="login-col login-col__form">
+                  <div class="login-col__form--inner">
+                     <h2 class="login__title">Вход</h2>
+                     <p class="login__text">Введите номер телефона или электронную почту,
+                        <span>которые вы указывали при регистрации</span> </p>
+
+                     <div class="login-tabs">
+                        <div class="login-tabs__nav">
+                           <span class="tab-item-nav login-tabs__nav--item active" data-tab="#tab_1">Войти по
+                              E-mail</span>
+                           <span class="tab-item-nav login-tabs__nav--item" data-tab="#tab_2">Войти по номеру
+                              телефона</span>
+                        </div>
+                        <div class="login-tabs__body">
+                           <div id="tab_1" class="login-tabs__body--item tab-item-body active">
+                              <form action="#" class="login-form js-form-validate">
+                                 <label class="login-label js-field">
+                                    <span class="login-label__row">E-mail</span>
+                                    <input type="email" class="login-label__input input" name="email"
+                                       placeholder="Е-mail" data-validate>
+                                    <span class="login-label__error">Обязательно к заполнению</span>
+                                 </label>
+                                 <label class="login-label js-field">
+                                    <span class="login-label__row">Пароль</span>
+                                    <input type="password" class="login-label__input input" name="password"
+                                       placeholder="Введите пароль" data-validate>
+                                    <span class="login-label__error">Обязательно к заполнению</span>
+                                 </label>
+
+                                 <p class="login__forgot" data-path="recovery" data-animation="fadeInUp"
+                                    data-speed="500">Забыли пароль?</p>
+                                 <p class="login-or-register">Нет аккаунта? <a href="register.html">Регистрация</a> </p>
+
+                                 <button class="btn login__btn">ВХОД</button>
+                              </form>
+                           </div>
+                           <div id="tab_2" class="login__tabs-body--item tab-item-body">
+                              <label class="login-label">
+                                 <span class="login-label__row">Номер телефона</span>
+                                 <input type="tel" class="login-label__input input" name="tel"
+                                    placeholder="+7 (8352) 21-71-61">
+                              </label>
+                              <p class="login__info">На ваш номер будет отправлено СМС с кодом,
+                                 для подтверждения входа</p>
+
+                              <p class="login-or-register">Нет аккаунта? <a href="register.html">Регистрация</a> </p>
+
+                              <button class="btn login__btn" data-path="get-code" data-animation="fadeInUp"
+                                 data-speed="500">Получить код</button>
+
+                           </div>
+                        </div>
+                     </div>
+
+                  </div>
+               </div>
+            </div>
+         </div>
+      </main>
+      <!-- @import "html/footer.html" -->
+      <!-- @import "html/iu/modal.html" -->
+   </div>
+   <!-- @import "html/iu/js.html" -->
+</body>
+
+</html>

@@ -10,12 +10,27 @@
    text-align: center;
    margin-top: -8px;
 
+   @media (max-width:$md3+px) {
+      max-width: 335px;
+      margin: 0 auto;
+      margin-top: -8px;
+   }
+
    @media (max-width:$md2+px) {
-      padding: 32px 38px;
+      padding: 24px 16px;
    }
 
    @media (min-width:$md2+px) {
-      padding: 43px 63px 47px 63px;
+      padding: 33px 47px;
+   }
+
+   &__head {
+      @media (min-width:$md3+px) {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         margin-bottom: 32px;
+      }
    }
 
    &__body {
@@ -30,24 +45,6 @@
          padding: 16px 32px;
          border-radius: 150px;
       }
-
-      @media (min-width:$md1+px) {
-         padding: 16px 62px;
-      }
-   }
-
-   &__head {
-      @media (min-width:$md3+px) {
-         display: flex;
-         justify-content: space-between;
-         align-items: center;
-         margin-bottom: 32px;
-      }
-   }
-
-   &__group {
-      position: relative;
-
    }
 
    &__title {
@@ -56,20 +53,24 @@
       }
    }
 
-   &__btn {
-      font-family: "Montserrat";
-      font-weight: bold;
-      font-size: 18px;
-
-      @media (min-width:$md3+px) {
-         font-size: 24px;
-         line-height: 29px;
-      }
+   &__group {
+      position: relative;
    }
-}
 
-.nicescroll-cursors {
-   background-color: $acentColor !important;
+   &__btn {
+      background-color: $acentColor;
+      color: $whiteColor;
+
+      @media (max-width:$md2+px) {
+         font-size: 14px;
+         line-height: 18px;
+      }
+
+      font-size: 19px;
+      line-height: 23px;
+      padding-left: 50px;
+      padding-right: 50px;
+   }
 }
 
 .select {
@@ -88,22 +89,21 @@
       cursor: pointer;
 
       @media (max-width:$md3+px) {
+         margin-bottom: 12px;
+         padding: 12px 20px;
+      }
+
+      @media (max-width:$md2+px) {
+         font-size: 14px;
          border: 1px solid #fff;
          border-radius: 150px;
          background-color: #fff;
-         padding: 12px 20px;
-         font-size: 14px;
-         margin-bottom: 12px;
       }
 
-      @media (min-width:$md3+px) {
+      @media (min-width:$md2+px) {
          font-size: 18px;
          line-height: 22px;
-      }
 
-      @media (min-width:$md1+px) {
-         font-size: 24px;
-         line-height: 29px;
       }
    }
 
@@ -114,27 +114,35 @@
 
       @media (max-width:$md2+px) {
          margin-left: 5px;
+
+         &:before {
+            font-size: 12px;
+         }
       }
 
       @media (min-width:$md2+px) {
          margin-left: 18px;
-      }
 
-      &:before {
-         font-size: 14px;
+         &:before {
+            font-size: 14px;
+         }
       }
    }
 
    &-options {
+      display: none;
+      overflow: hidden;
       position: absolute;
       z-index: 10;
       top: 100%;
-      display: none;
-      overflow: hidden;
       background-color: #fff;
       padding: 22px 22px 22px 37px;
       box-shadow: 10px 10px 20px rgba(201, 213, 235, 0.5);
       border-radius: 25px;
+
+      @media (max-width:$md3+px) {
+         width: 100%;
+      }
 
       @media (min-width:1200px) {
          min-width: 100%;
@@ -146,11 +154,7 @@
       padding: 0px 14px 0px 0px;
       text-align: left;
 
-      .value_1 {
-         display: none;
-         opacity: 0;
-         visibility: hidden;
-      }
+
    }
 
    &-options-scroll {
@@ -170,4 +174,8 @@
          color: #000;
       }
    }
+}
+
+.nicescroll-cursors {
+   background-color: $acentColor !important;
 }

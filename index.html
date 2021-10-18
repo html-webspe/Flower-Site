@@ -17,47 +17,41 @@
 
 <body class="main-body">
 	<div class="wrapper">
-		<header id="header" class="header">
-   <div class="header__inner">
-      <div class="header__left d-flex">
-         <a href="/" class="header__logo logo">
-            <img src="img/logo.svg" alt="logo">
-         </a>
+		<header id="header" class="header d-flex">
+   <div class="header__left d-flex">
+      <a href="/" class="header__logo logo">
+         <img src="img/logo.svg" alt="logo">
+      </a>
 
-         <div class="header__location location icon-location" data-da="header-menu__list,7,790">
-            Выберите город</div>
+      <div class="header__location location icon-location" data-da="header-menu__list,7,790">
+         Выберите город</div>
+   </div>
+
+   <div class="header__right d-flex">
+      <div class="header__phone phone" data-da="header-menu__list,4,1070">
+         <a href="tel:+79999999999">+7 999 999-99-99</a>
       </div>
 
-      <div class="header__right d-flex">
-
-
-
-
-         <div class="header__phone phone" data-da="header-menu__list,4,1200">
-            <a href="tel:+79999999999">+7 999 999-99-99</a>
-         </div>
-         <div class="header-menu__icon">
-            <span></span>
-         </div>
-         <div class="header__social social" data-da="header-menu__list,5,968">
-            <ul class="social__list">
-               <li class="social__item"><a href="#" class="social__link icon-telegram"></a></li>
-               <li class="social__item"><a href="#" class="social__link icon-whatsapp"></a></li>
-               <li class="social__item"><a href="#" class="social__link icon-inst"></a></li>
-            </ul>
-         </div>
-         <nav id="header-menu" class="header-menu">
-            <ul class="header-menu__list">
-               <li class="header-menu__item"><a href="" class="header-menu__link">Навигационная ссылка</a></li>
-               <li class="header-menu__item"><a href="" class="header-menu__link">Навигационная ссылка</a></li>
-               <li class="header-menu__item"><a href="" class="header-menu__link">Навигационная ссылка</a></li>
-            </ul>
-         </nav>
-         <div class="header__action action" data-da="header-menu__list,6,600">
-            <div class="action__user icon-avatar"></div>
-            <a href="checkout.html" class="action__cart icon-cart"><span
-                  class="action__cart-count cart-count">1</span></a>
-         </div>
+      <div class="header__social social" data-da="header-menu__list,5,992.98">
+         <ul class="social__list d-flex">
+            <li class="social__item"><a href="#" class="social__link icon-telegram"></a></li>
+            <li class="social__item"><a href="#" class="social__link icon-whatsapp"></a></li>
+            <li class="social__item"><a href="#" class="social__link icon-inst"></a></li>
+         </ul>
+      </div>
+      <nav id="header-menu" class="header-menu">
+         <ul class="header-menu__list">
+            <li class="header-menu__item"><a href="card.html" class="header-menu__link">Навигационная ссылка</a></li>
+            <li class="header-menu__item"><a href="" class="header-menu__link">Навигационная ссылка</a></li>
+            <li class="header-menu__item"><a href="" class="header-menu__link">Навигационная ссылка</a></li>
+         </ul>
+      </nav>
+      <div class="header__action action d-flex" data-da="header-menu__list,6,600">
+         <a href="login.html" class="action__user icon-avatar"></a>
+         <a href="checkout.html" class="action__cart icon-cart"><span class="action__cart-count cart-count">1</span></a>
+      </div>
+      <div class="header-menu__icon">
+         <span></span>
       </div>
    </div>
 </header>
@@ -65,17 +59,16 @@
 		<main class="main-page">
 			<section class="section home">
    <div class='container home__container'>
-
       <div class="home-body">
-         <div class="col home-col home-col__left">
+         <div class="col home-col">
             <p class="subtitle home__subtitle">Твой букет говорит за тебя</p>
             <h1 class="title home__title">Цветы и подарки <span>в Зеленограде</span></h1>
             <a href="catalog.html" class="btn home__btn">Перейти к каталогу</a>
          </div>
-         <div class="col home-col  home-col__right">
-            <img class="home__img" src="img/home/flower.png" alt="flower" />
+         <div class="col home-col">
+            <img src="img/home/flower.png" alt="flower-img" />
          </div>
-         <div class="col home-col home-col__select">
+         <div class="col home-col">
             <form action="#" class="form select-form">
                <div class="select-form__inner">
 
@@ -128,10 +121,7 @@
                         </select>
                      </div>
                      <div class="select-form__group select-form__group--filters">
-                        <div class="select-form__group--block ">
-                           <input class="select-form__group--input" placeholder="Цена"></input>
-                           <span class="icon-arrow-down filters__btn"></span>
-                        </div>
+                        <span class="select-form__group--price icon-arrow-down">Цена</span>
                         <div class="search-filters filters">
                            <div class="filters__item filters-price">
                               <h3 class="filters-price__title">Ценовой диапазон</h3>
@@ -163,17 +153,15 @@
                         </div>
                      </div>
                   </div>
-
-
                </div>
             </form>
             <div class="home__decor home__decor-4"></div>
          </div>
       </div>
-      <div class="home__decor home__decor-1"></div>
-      <div class="home__decor home__decor-2"></div>
-      <div class="home__decor home__decor-3"></div>
    </div>
+   <div class="home__decor home__decor-1"></div>
+   <div class="home__decor home__decor-2"></div>
+   <div class="home__decor home__decor-3"></div>
 </section>
 			<div class="section category">
    <div class="container category__container">
@@ -187,11 +175,9 @@
                         <img src="img/catalog/1.png" alt="catalog-img" />
                      </div>
                   </div>
-
-                  <a href="" class="slider__link">
+                  <a href="#" class="slider__link">
                      <h5 class="slider__title">Акции</h5>
                   </a>
-
                </div>
                <div class="swiper-slide slider__item">
 
@@ -200,8 +186,7 @@
                         <img src="img/catalog/2.png" alt="catalog-img" />
                      </div>
                   </div>
-                  <a href="" class="slider__link">
-
+                  <a href="#" class="slider__link">
                      <h5 class="slider__title">Монобукеты</h5>
                   </a>
                </div>
@@ -283,20 +268,6 @@
       </div>
    </div>
 </div>
-			<div class="search">
-   <div class='container'>
-      <div class="search__form form">
-         <form action="#" class="search__form-item">
-
-            <div class="search__form-item-input">
-               <button class="search__form-icon icon-serch"></button>
-               <input autocomplete="off" type="text" placeholder="Поиск" class="search__form-input">
-            </div>
-
-         </form>
-      </div>
-   </div>
-</div>
 			<section class="section product">
    <div class='container product__container'>
       <div class="section__head">
@@ -307,9 +278,8 @@
          </div>
       </div>
 
-
       <div class="product__body">
-         <div class="product__hits-container">
+         <div class="product__container-slider">
             <div class="product__wrapper">
 
                <div class="product__item">
@@ -319,14 +289,12 @@
                   <div class="product__item-body">
                      <div class="product__item-box">
                         <a href="card.html">
-                           <h4 class="product__title">Название букета</h4>
+                           <h4 class="product__title">1й букет</h4>
                         </a>
                      </div>
                      <div class="product__item-box">
-                        <div class="product__item-box--left">
-                           <span class="product__item-text">К-во букетов:</span>
-                           <span class="product__price">2500 Р</span>
-                        </div>
+                        <span class="product__price">2500 Р</span>
+
                         <div class="product__count">
                            <span class="product__count-icon icon-minus"></span>
                            <span class="product__count-icon product__count-counter">1</span>
@@ -348,14 +316,12 @@
                   <div class="product__item-body">
                      <div class="product__item-box">
                         <a href="card.html">
-                           <h4 class="product__title">Название букета</h4>
+                           <h4 class="product__title">1й букет</h4>
                         </a>
                      </div>
                      <div class="product__item-box">
-                        <div class="product__item-box--left">
-                           <span class="product__item-text">К-во букетов:</span>
-                           <span class="product__price">2500 Р</span>
-                        </div>
+                        <span class="product__price">2500 Р</span>
+
                         <div class="product__count">
                            <span class="product__count-icon icon-minus"></span>
                            <span class="product__count-icon product__count-counter">1</span>
@@ -364,7 +330,8 @@
                      </div>
                      <div class="product__item-box">
                         <a href="#" class="product__cart icon-cart"></a>
-                        <a href="#" class="btn btn-white product__item-btn">Быстрый заказ</a>
+                        <a href="#" class="btn btn-white product__item-btn" data-path="first" data-animation="fadeInUp"
+                           data-speed="500">Быстрый заказ</a>
                      </div>
                   </div>
                   <div class="product__favorite icon-favorites favorite"></div>
@@ -376,14 +343,12 @@
                   <div class="product__item-body">
                      <div class="product__item-box">
                         <a href="card.html">
-                           <h4 class="product__title">Название букета</h4>
+                           <h4 class="product__title">1й букет</h4>
                         </a>
                      </div>
                      <div class="product__item-box">
-                        <div class="product__item-box--left">
-                           <span class="product__item-text">К-во букетов:</span>
-                           <span class="product__price">2500 Р</span>
-                        </div>
+                        <span class="product__price">2500 Р</span>
+
                         <div class="product__count">
                            <span class="product__count-icon icon-minus"></span>
                            <span class="product__count-icon product__count-counter">1</span>
@@ -392,7 +357,8 @@
                      </div>
                      <div class="product__item-box">
                         <a href="#" class="product__cart icon-cart"></a>
-                        <a href="#" class="btn btn-white product__item-btn">Быстрый заказ</a>
+                        <a href="#" class="btn btn-white product__item-btn" data-path="first" data-animation="fadeInUp"
+                           data-speed="500">Быстрый заказ</a>
                      </div>
                   </div>
                   <div class="product__favorite icon-favorites favorite"></div>
@@ -404,14 +370,12 @@
                   <div class="product__item-body">
                      <div class="product__item-box">
                         <a href="card.html">
-                           <h4 class="product__title">Название букета</h4>
+                           <h4 class="product__title">1й букет</h4>
                         </a>
                      </div>
                      <div class="product__item-box">
-                        <div class="product__item-box--left">
-                           <span class="product__item-text">К-во букетов:</span>
-                           <span class="product__price">2500 Р</span>
-                        </div>
+                        <span class="product__price">2500 Р</span>
+
                         <div class="product__count">
                            <span class="product__count-icon icon-minus"></span>
                            <span class="product__count-icon product__count-counter">1</span>
@@ -420,44 +384,15 @@
                      </div>
                      <div class="product__item-box">
                         <a href="#" class="product__cart icon-cart"></a>
-                        <a href="#" class="btn btn-white product__item-btn">Быстрый заказ</a>
-                     </div>
-                  </div>
-                  <div class="product__favorite icon-favorites favorite"></div>
-               </div>
-               <div class="product__item">
-                  <div class="product__item-img">
-                     <img src="img/product-hits/product-img-1.jpg" alt="product-img" />
-                  </div>
-                  <div class="product__item-body">
-                     <div class="product__item-box">
-                        <a href="card.html">
-                           <h4 class="product__title">Название букета</h4>
-                        </a>
-                     </div>
-                     <div class="product__item-box">
-                        <div class="product__item-box--left">
-                           <span class="product__item-text">К-во букетов:</span>
-                           <span class="product__price">2500 Р</span>
-                        </div>
-                        <div class="product__count">
-                           <span class="product__count-icon icon-minus"></span>
-                           <span class="product__count-icon product__count-counter">1</span>
-                           <span class="product__count-icon icon-plus"></span>
-                        </div>
-                     </div>
-                     <div class="product__item-box">
-                        <a href="#" class="product__cart icon-cart"></a>
-                        <a href="#" class="btn btn-white product__item-btn">Быстрый заказ</a>
+                        <a href="#" class="btn btn-white product__item-btn" data-path="first" data-animation="fadeInUp"
+                           data-speed="500">Быстрый заказ</a>
                      </div>
                   </div>
                   <div class="product__favorite icon-favorites favorite"></div>
                </div>
 
             </div>
-
          </div>
-
       </div>
    </div>
 </section>
@@ -471,26 +406,23 @@
          </div>
       </div>
 
-
       <div class="product__body">
-         <div class="product__author-container">
+         <div class="product__container-slider">
             <div class="product__wrapper">
 
                <div class="product__item">
                   <div class="product__item-img">
-                     <img src="img/product-author/product-author-1.jpg" alt="product-img" />
+                     <img src="img/product-hits/product-img-1.jpg" alt="product-img" />
                   </div>
                   <div class="product__item-body">
                      <div class="product__item-box">
                         <a href="card.html">
-                           <h4 class="product__title">Название букета</h4>
+                           <h4 class="product__title">1й букет</h4>
                         </a>
                      </div>
                      <div class="product__item-box">
-                        <div class="product__item-box--left">
-                           <span class="product__item-text">К-во букетов:</span>
-                           <span class="product__price">2500 Р</span>
-                        </div>
+                        <span class="product__price">2500 Р</span>
+
                         <div class="product__count">
                            <span class="product__count-icon icon-minus"></span>
                            <span class="product__count-icon product__count-counter">1</span>
@@ -499,26 +431,25 @@
                      </div>
                      <div class="product__item-box">
                         <a href="#" class="product__cart icon-cart"></a>
-                        <a href="#" class="btn btn-white product__item-btn">Быстрый заказ</a>
+                        <a href="#" class="btn btn-white product__item-btn" data-path="first" data-animation="fadeInUp"
+                           data-speed="500">Быстрый заказ</a>
                      </div>
                   </div>
                   <div class="product__favorite icon-favorites favorite"></div>
                </div>
                <div class="product__item">
                   <div class="product__item-img">
-                     <img src="img/product-author/product-author-1.jpg" alt="product-img" />
+                     <img src="img/product-hits/product-img-1.jpg" alt="product-img" />
                   </div>
                   <div class="product__item-body">
                      <div class="product__item-box">
                         <a href="card.html">
-                           <h4 class="product__title">Название букета</h4>
+                           <h4 class="product__title">1й букет</h4>
                         </a>
                      </div>
                      <div class="product__item-box">
-                        <div class="product__item-box--left">
-                           <span class="product__item-text">К-во букетов:</span>
-                           <span class="product__price">2500 Р</span>
-                        </div>
+                        <span class="product__price">2500 Р</span>
+
                         <div class="product__count">
                            <span class="product__count-icon icon-minus"></span>
                            <span class="product__count-icon product__count-counter">1</span>
@@ -527,26 +458,25 @@
                      </div>
                      <div class="product__item-box">
                         <a href="#" class="product__cart icon-cart"></a>
-                        <a href="#" class="btn btn-white product__item-btn">Быстрый заказ</a>
+                        <a href="#" class="btn btn-white product__item-btn" data-path="first" data-animation="fadeInUp"
+                           data-speed="500">Быстрый заказ</a>
                      </div>
                   </div>
                   <div class="product__favorite icon-favorites favorite"></div>
                </div>
                <div class="product__item">
                   <div class="product__item-img">
-                     <img src="img/product-author/product-author-1.jpg" alt="product-img" />
+                     <img src="img/product-hits/product-img-1.jpg" alt="product-img" />
                   </div>
                   <div class="product__item-body">
                      <div class="product__item-box">
                         <a href="card.html">
-                           <h4 class="product__title">Название букета</h4>
+                           <h4 class="product__title">1й букет</h4>
                         </a>
                      </div>
                      <div class="product__item-box">
-                        <div class="product__item-box--left">
-                           <span class="product__item-text">К-во букетов:</span>
-                           <span class="product__price">2500 Р</span>
-                        </div>
+                        <span class="product__price">2500 Р</span>
+
                         <div class="product__count">
                            <span class="product__count-icon icon-minus"></span>
                            <span class="product__count-icon product__count-counter">1</span>
@@ -555,26 +485,25 @@
                      </div>
                      <div class="product__item-box">
                         <a href="#" class="product__cart icon-cart"></a>
-                        <a href="#" class="btn btn-white product__item-btn">Быстрый заказ</a>
+                        <a href="#" class="btn btn-white product__item-btn" data-path="first" data-animation="fadeInUp"
+                           data-speed="500">Быстрый заказ</a>
                      </div>
                   </div>
                   <div class="product__favorite icon-favorites favorite"></div>
                </div>
                <div class="product__item">
                   <div class="product__item-img">
-                     <img src="img/product-author/product-author-1.jpg" alt="product-img" />
+                     <img src="img/product-hits/product-img-1.jpg" alt="product-img" />
                   </div>
                   <div class="product__item-body">
                      <div class="product__item-box">
                         <a href="card.html">
-                           <h4 class="product__title">Название букета</h4>
+                           <h4 class="product__title">1й букет</h4>
                         </a>
                      </div>
                      <div class="product__item-box">
-                        <div class="product__item-box--left">
-                           <span class="product__item-text">К-во букетов:</span>
-                           <span class="product__price">2500 Р</span>
-                        </div>
+                        <span class="product__price">2500 Р</span>
+
                         <div class="product__count">
                            <span class="product__count-icon icon-minus"></span>
                            <span class="product__count-icon product__count-counter">1</span>
@@ -583,44 +512,15 @@
                      </div>
                      <div class="product__item-box">
                         <a href="#" class="product__cart icon-cart"></a>
-                        <a href="#" class="btn btn-white product__item-btn">Быстрый заказ</a>
-                     </div>
-                  </div>
-                  <div class="product__favorite icon-favorites favorite"></div>
-               </div>
-               <div class="product__item">
-                  <div class="product__item-img">
-                     <img src="img/product-author/product-author-1.jpg" alt="product-img" />
-                  </div>
-                  <div class="product__item-body">
-                     <div class="product__item-box">
-                        <a href="card.html">
-                           <h4 class="product__title">Название букета</h4>
-                        </a>
-                     </div>
-                     <div class="product__item-box">
-                        <div class="product__item-box--left">
-                           <span class="product__item-text">К-во букетов:</span>
-                           <span class="product__price">2500 Р</span>
-                        </div>
-                        <div class="product__count">
-                           <span class="product__count-icon icon-minus"></span>
-                           <span class="product__count-icon product__count-counter">1</span>
-                           <span class="product__count-icon icon-plus"></span>
-                        </div>
-                     </div>
-                     <div class="product__item-box">
-                        <a href="#" class="product__cart icon-cart"></a>
-                        <a href="#" class="btn btn-white product__item-btn">Быстрый заказ</a>
+                        <a href="#" class="btn btn-white product__item-btn" data-path="first" data-animation="fadeInUp"
+                           data-speed="500">Быстрый заказ</a>
                      </div>
                   </div>
                   <div class="product__favorite icon-favorites favorite"></div>
                </div>
 
             </div>
-
          </div>
-
       </div>
    </div>
 </section>
@@ -634,9 +534,8 @@
          </div>
       </div>
 
-
       <div class="product__body">
-         <div class="product__composition-container">
+         <div class="product__container-slider">
             <div class="product__wrapper">
 
                <div class="product__item">
@@ -646,14 +545,12 @@
                   <div class="product__item-body">
                      <div class="product__item-box">
                         <a href="card.html">
-                           <h4 class="product__title">Название букета</h4>
+                           <h4 class="product__title">1й букет</h4>
                         </a>
                      </div>
                      <div class="product__item-box">
-                        <div class="product__item-box--left">
-                           <span class="product__item-text">К-во букетов:</span>
-                           <span class="product__price">2500 Р</span>
-                        </div>
+                        <span class="product__price">2500 Р</span>
+
                         <div class="product__count">
                            <span class="product__count-icon icon-minus"></span>
                            <span class="product__count-icon product__count-counter">1</span>
@@ -662,7 +559,8 @@
                      </div>
                      <div class="product__item-box">
                         <a href="#" class="product__cart icon-cart"></a>
-                        <a href="#" class="btn btn-white product__item-btn">Быстрый заказ</a>
+                        <a href="#" class="btn btn-white product__item-btn" data-path="first" data-animation="fadeInUp"
+                           data-speed="500">Быстрый заказ</a>
                      </div>
                   </div>
                   <div class="product__favorite icon-favorites favorite"></div>
@@ -674,14 +572,12 @@
                   <div class="product__item-body">
                      <div class="product__item-box">
                         <a href="card.html">
-                           <h4 class="product__title">Название букета</h4>
+                           <h4 class="product__title">1й букет</h4>
                         </a>
                      </div>
                      <div class="product__item-box">
-                        <div class="product__item-box--left">
-                           <span class="product__item-text">К-во букетов:</span>
-                           <span class="product__price">2500 Р</span>
-                        </div>
+                        <span class="product__price">2500 Р</span>
+
                         <div class="product__count">
                            <span class="product__count-icon icon-minus"></span>
                            <span class="product__count-icon product__count-counter">1</span>
@@ -690,7 +586,8 @@
                      </div>
                      <div class="product__item-box">
                         <a href="#" class="product__cart icon-cart"></a>
-                        <a href="#" class="btn btn-white product__item-btn">Быстрый заказ</a>
+                        <a href="#" class="btn btn-white product__item-btn" data-path="first" data-animation="fadeInUp"
+                           data-speed="500">Быстрый заказ</a>
                      </div>
                   </div>
                   <div class="product__favorite icon-favorites favorite"></div>
@@ -702,14 +599,12 @@
                   <div class="product__item-body">
                      <div class="product__item-box">
                         <a href="card.html">
-                           <h4 class="product__title">Название букета</h4>
+                           <h4 class="product__title">1й букет</h4>
                         </a>
                      </div>
                      <div class="product__item-box">
-                        <div class="product__item-box--left">
-                           <span class="product__item-text">К-во букетов:</span>
-                           <span class="product__price">2500 Р</span>
-                        </div>
+                        <span class="product__price">2500 Р</span>
+
                         <div class="product__count">
                            <span class="product__count-icon icon-minus"></span>
                            <span class="product__count-icon product__count-counter">1</span>
@@ -718,7 +613,8 @@
                      </div>
                      <div class="product__item-box">
                         <a href="#" class="product__cart icon-cart"></a>
-                        <a href="#" class="btn btn-white product__item-btn">Быстрый заказ</a>
+                        <a href="#" class="btn btn-white product__item-btn" data-path="first" data-animation="fadeInUp"
+                           data-speed="500">Быстрый заказ</a>
                      </div>
                   </div>
                   <div class="product__favorite icon-favorites favorite"></div>
@@ -730,14 +626,12 @@
                   <div class="product__item-body">
                      <div class="product__item-box">
                         <a href="card.html">
-                           <h4 class="product__title">Название букета</h4>
+                           <h4 class="product__title">1й букет</h4>
                         </a>
                      </div>
                      <div class="product__item-box">
-                        <div class="product__item-box--left">
-                           <span class="product__item-text">К-во букетов:</span>
-                           <span class="product__price">2500 Р</span>
-                        </div>
+                        <span class="product__price">2500 Р</span>
+
                         <div class="product__count">
                            <span class="product__count-icon icon-minus"></span>
                            <span class="product__count-icon product__count-counter">1</span>
@@ -746,44 +640,15 @@
                      </div>
                      <div class="product__item-box">
                         <a href="#" class="product__cart icon-cart"></a>
-                        <a href="#" class="btn btn-white product__item-btn">Быстрый заказ</a>
-                     </div>
-                  </div>
-                  <div class="product__favorite icon-favorites favorite"></div>
-               </div>
-               <div class="product__item">
-                  <div class="product__item-img">
-                     <img src="img/product-hits/product-img-1.jpg" alt="product-img" />
-                  </div>
-                  <div class="product__item-body">
-                     <div class="product__item-box">
-                        <a href="card.html">
-                           <h4 class="product__title">Название букета</h4>
-                        </a>
-                     </div>
-                     <div class="product__item-box">
-                        <div class="product__item-box--left">
-                           <span class="product__item-text">К-во букетов:</span>
-                           <span class="product__price">2500 Р</span>
-                        </div>
-                        <div class="product__count">
-                           <span class="product__count-icon icon-minus"></span>
-                           <span class="product__count-icon product__count-counter">1</span>
-                           <span class="product__count-icon icon-plus"></span>
-                        </div>
-                     </div>
-                     <div class="product__item-box">
-                        <a href="#" class="product__cart icon-cart"></a>
-                        <a href="#" class="btn btn-white product__item-btn">Быстрый заказ</a>
+                        <a href="#" class="btn btn-white product__item-btn" data-path="first" data-animation="fadeInUp"
+                           data-speed="500">Быстрый заказ</a>
                      </div>
                   </div>
                   <div class="product__favorite icon-favorites favorite"></div>
                </div>
 
             </div>
-
          </div>
-
       </div>
    </div>
 </section>
@@ -797,56 +662,23 @@
          </div>
       </div>
 
-
       <div class="product__body">
-         <div class="product__presents-container">
+         <div class="product__container-slider">
             <div class="product__wrapper">
 
                <div class="product__item">
                   <div class="product__item-img">
-                     <img src="img/product-presents/product-presents-1.jpg" alt="product-img" />
+                     <img src="img/product-hits/product-img-1.jpg" alt="product-img" />
                   </div>
                   <div class="product__item-body">
                      <div class="product__item-box">
                         <a href="card.html">
-                           <h4 class="product__title">Название букета</h4>
+                           <h4 class="product__title">1й букет</h4>
                         </a>
                      </div>
                      <div class="product__item-box">
-                        <div class="product__item-box--left">
-                           <span class="product__item-text">К-во букетов:</span>
-                           <span class="product__price">2500 Р</span>
-                        </div>
-                        <div class="product__count">
-                           <span class="product__count-icon icon-minus"></span>
-                           <span class="product__count-icon product__count-counter">1</span>
-                           <span class="product__count-icon icon-plus"></span>
-                        </div>
-                     </div>
-                     <div class="product__item-box">
-                        <a href="#" class="product__cart icon-cart">
-                           <span class="action__cart-count cart-count">1</span>
-                        </a>
-                        <a href="#" class="btn btn-white product__item-btn">Быстрый заказ</a>
-                     </div>
-                  </div>
-                  <div class="product__favorite icon-favorites favorite"></div>
-               </div>
-               <div class="product__item">
-                  <div class="product__item-img">
-                     <img src="img/product-presents/product-presents-2.jpg" alt="product-img" />
-                  </div>
-                  <div class="product__item-body">
-                     <div class="product__item-box">
-                        <a href="card.html">
-                           <h4 class="product__title">Название букета</h4>
-                        </a>
-                     </div>
-                     <div class="product__item-box">
-                        <div class="product__item-box--left">
-                           <span class="product__item-text">К-во букетов:</span>
-                           <span class="product__price">2500 Р</span>
-                        </div>
+                        <span class="product__price">2500 Р</span>
+
                         <div class="product__count">
                            <span class="product__count-icon icon-minus"></span>
                            <span class="product__count-icon product__count-counter">1</span>
@@ -855,26 +687,25 @@
                      </div>
                      <div class="product__item-box">
                         <a href="#" class="product__cart icon-cart"></a>
-                        <a href="#" class="btn btn-white product__item-btn">Быстрый заказ</a>
+                        <a href="#" class="btn btn-white product__item-btn" data-path="first" data-animation="fadeInUp"
+                           data-speed="500">Быстрый заказ</a>
                      </div>
                   </div>
                   <div class="product__favorite icon-favorites favorite"></div>
                </div>
                <div class="product__item">
                   <div class="product__item-img">
-                     <img src="img/product-presents/product-presents-3.jpg" alt="product-img" />
+                     <img src="img/product-hits/product-img-1.jpg" alt="product-img" />
                   </div>
                   <div class="product__item-body">
                      <div class="product__item-box">
                         <a href="card.html">
-                           <h4 class="product__title">Название букета</h4>
+                           <h4 class="product__title">1й букет</h4>
                         </a>
                      </div>
                      <div class="product__item-box">
-                        <div class="product__item-box--left">
-                           <span class="product__item-text">К-во букетов:</span>
-                           <span class="product__price">2500 Р</span>
-                        </div>
+                        <span class="product__price">2500 Р</span>
+
                         <div class="product__count">
                            <span class="product__count-icon icon-minus"></span>
                            <span class="product__count-icon product__count-counter">1</span>
@@ -883,26 +714,25 @@
                      </div>
                      <div class="product__item-box">
                         <a href="#" class="product__cart icon-cart"></a>
-                        <a href="#" class="btn btn-white product__item-btn">Быстрый заказ</a>
+                        <a href="#" class="btn btn-white product__item-btn" data-path="first" data-animation="fadeInUp"
+                           data-speed="500">Быстрый заказ</a>
                      </div>
                   </div>
                   <div class="product__favorite icon-favorites favorite"></div>
                </div>
                <div class="product__item">
                   <div class="product__item-img">
-                     <img src="img/product-presents/product-presents-4.jpg" alt="product-img" />
+                     <img src="img/product-hits/product-img-1.jpg" alt="product-img" />
                   </div>
                   <div class="product__item-body">
                      <div class="product__item-box">
                         <a href="card.html">
-                           <h4 class="product__title">Название букета</h4>
+                           <h4 class="product__title">1й букет</h4>
                         </a>
                      </div>
                      <div class="product__item-box">
-                        <div class="product__item-box--left">
-                           <span class="product__item-text">К-во букетов:</span>
-                           <span class="product__price">2500 Р</span>
-                        </div>
+                        <span class="product__price">2500 Р</span>
+
                         <div class="product__count">
                            <span class="product__count-icon icon-minus"></span>
                            <span class="product__count-icon product__count-counter">1</span>
@@ -911,26 +741,25 @@
                      </div>
                      <div class="product__item-box">
                         <a href="#" class="product__cart icon-cart"></a>
-                        <a href="#" class="btn btn-white product__item-btn">Быстрый заказ</a>
+                        <a href="#" class="btn btn-white product__item-btn" data-path="first" data-animation="fadeInUp"
+                           data-speed="500">Быстрый заказ</a>
                      </div>
                   </div>
                   <div class="product__favorite icon-favorites favorite"></div>
                </div>
                <div class="product__item">
                   <div class="product__item-img">
-                     <img src="img/product-presents/product-presents-1.jpg" alt="product-img" />
+                     <img src="img/product-hits/product-img-1.jpg" alt="product-img" />
                   </div>
                   <div class="product__item-body">
                      <div class="product__item-box">
                         <a href="card.html">
-                           <h4 class="product__title">Название букета</h4>
+                           <h4 class="product__title">1й букет</h4>
                         </a>
                      </div>
                      <div class="product__item-box">
-                        <div class="product__item-box--left">
-                           <span class="product__item-text">К-во букетов:</span>
-                           <span class="product__price">2500 Р</span>
-                        </div>
+                        <span class="product__price">2500 Р</span>
+
                         <div class="product__count">
                            <span class="product__count-icon icon-minus"></span>
                            <span class="product__count-icon product__count-counter">1</span>
@@ -939,75 +768,79 @@
                      </div>
                      <div class="product__item-box">
                         <a href="#" class="product__cart icon-cart"></a>
-                        <a href="#" class="btn btn-white product__item-btn">Быстрый заказ</a>
+                        <a href="#" class="btn btn-white product__item-btn" data-path="first" data-animation="fadeInUp"
+                           data-speed="500">Быстрый заказ</a>
                      </div>
                   </div>
                   <div class="product__favorite icon-favorites favorite"></div>
                </div>
 
             </div>
-
          </div>
-
       </div>
    </div>
 </section>
 		</main>
 
 		<footer class="footer">
-   <div class="footer__body ">
-      <div class="footer__logo">
-         <a href="/" class="logo "> <img src="img/logo-footer.svg" alt="logo" /></a>
-      </div>
-      <div class="footer__body-inner">
-         <div id="map" class="footer__map map">
-
+   <div class='container footer__container'>
+      <div class="footer__body">
+         <div class="footer__logo">
+            <a href="/" class="logo "> <img src="img/logo-footer.svg" alt="logo" /></a>
          </div>
-         <div class="footer__content">
-            <div class="row footer__row">
-               <div class="col footer__col">
-                  <h4 class="footer__title">адрес</h4>
-                  <p>г. Зеленоград,
-                     <br>бульвар Юрьева, 25</br> </p>
+         <div class="footer__body-inner">
+            <div id="map" class="footer__map map">
 
-                  <h4 class="footer__title">телефон</h4>
-                  <div class="footer__phone phone">
-                     <a href="tel:+79999999999">+7 999 999-99-99</a>
+            </div>
+            <div class="footer__content">
+               <div class="row footer__row">
+                  <div class="col footer__col">
+                     <h4 class="footer__title">адрес</h4>
+                     <p>г. Зеленоград,
+                        <br>бульвар Юрьева, 25</br> </p>
+
+                     <h4 class="footer__title">телефон</h4>
+                     <div class="footer__phone phone">
+                        <a href="tel:+79999999999">+7 999 999-99-99</a>
+                     </div>
                   </div>
-               </div>
-               <div class="col footer__col">
-                  <h4 class="footer__title">страницы</h4>
-                  <nav class="footer__nav">
-                     <ul class="footer__nav-list">
-                        <li class="footer__nav-item"><a href="" class="footer__nav-link">Каталог</a></li>
-                        <li class="footer__nav-item"><a href="delivery.html" class="footer__nav-link">Доставка и
-                              оплата</a></li>
-                        <li class="footer__nav-item"><a href="" class="footer__nav-link">Личный кабинет</a></li>
-                        <li class="footer__nav-item"><a href="" class="footer__nav-link">Бонусы</a></li>
-                     </ul>
-                  </nav>
-               </div>
-               <div class="col footer__col">
-                  <h4 class="footer__title">соц.сети</h4>
-                  <div class="footer__social social">
-                     <ul class="social__list">
-                        <li class="social__item"><a href="#" class="footer__social-link social__link icon-telegram"></a>
-                        </li>
-                        <li class="social__item"><a href="#" class="footer__social-link social__link icon-whatsapp"></a>
-                        </li>
-                        <li class="social__item"><a href="#" class="footer__social-link social__link icon-inst"></a>
-                        </li>
-                     </ul>
+                  <div class="col footer__col">
+                     <h4 class="footer__title">страницы</h4>
+                     <nav class="footer__nav">
+                        <ul class="footer__nav-list">
+                           <li class="footer__nav-item"><a href="" class="footer__nav-link">Каталог</a></li>
+                           <li class="footer__nav-item"><a href="delivery.html" class="footer__nav-link">Доставка и
+                                 оплата</a></li>
+                           <li class="footer__nav-item"><a href="" class="footer__nav-link">Личный кабинет</a></li>
+                           <li class="footer__nav-item"><a href="" class="footer__nav-link">Бонусы</a></li>
+                        </ul>
+                     </nav>
+                  </div>
+                  <div class="col footer__col">
+                     <h4 class="footer__title">соц.сети</h4>
+                     <div class="footer__social social">
+                        <ul class="social__list">
+                           <li class="social__item"><a href="#"
+                                 class="footer__social-link social__link icon-telegram"></a>
+                           </li>
+                           <li class="social__item"><a href="#"
+                                 class="footer__social-link social__link icon-whatsapp"></a>
+                           </li>
+                           <li class="social__item"><a href="#" class="footer__social-link social__link icon-inst"></a>
+                           </li>
+                        </ul>
+                     </div>
                   </div>
                </div>
             </div>
          </div>
       </div>
    </div>
+
 </footer>
 		<div class="modal ">
-   <div class="modal__body" data-target="first">
-         <button class="quick-order__close modal-close icon-modal-close"></button>
+   <div id="quick-order" class="modal__body" data-target="first">
+      <button class="quick-order__close modal-close icon-modal-close"></button>
       <div class="quick-order">
          <div class="quick-order__body">
 
@@ -1017,7 +850,7 @@
                <div class="quick-order__product-item--img">
                   <img src="img/basket/basket-img.png" alt="basket-img" />
                </div>
-               <div class="quick-order__product-item--name">Моно букет Маттиола микс 20 шт</div>
+               <div class="quick-order__product-item--name"></div>
             </div>
 
             <p class="quick-order__text">Укажите ваши данные и наш менеджер свяжется с вами для оформления заказа</p>
@@ -1042,7 +875,60 @@
       </div>
 
    </div>
+   <div class="modal__body" data-target="get-code">
+      <button class="get-code__close modal-close icon-modal-close"></button>
+      <div class="get-code">
+         <div class="get-code__body">
+
+            <div class="get-code__title">Введите код, <br>
+               отправленный на номер</div>
+            <label class="login-label get-code__label">
+               <input type="tel" class="login-label__input get-code__input input" name="tel"
+                  placeholder="+7 (8352) 21-71-61" required>
+            </label>
+
+            <div class="signin-sms__wrap">
+               <input class="sms-input" type="tel" maxlength="1" tabindex="1">
+               <input class="sms-input" type="tel" maxlength="1" tabindex="2">
+               <input class="sms-input" type="tel" maxlength="1" tabindex="3">
+               <input class="sms-input" type="tel" maxlength="1" tabindex="4">
+            </div>
+
+            <p class="get-code__text">Повторная отправка через 25 секунд</p>
+
+            <button class="get-code__btn btn">Подтвердить</button>
+
+         </div>
+      </div>
+   </div>
+
+   <div class="modal__body" data-target="recovery">
+      <button class="recovery__close modal-close icon-modal-close"></button>
+
+      <div class="recovery">
+         <div class="recovery__body">
+            <div class="recovery__title">Восстановление пароля</div>
+
+            <p class="recovery__text">Введите электронную почту, указанную <span>при регистрации</span> </p>
+
+            <label class="login-label">
+               <span class="login-label__row">E-mail</span>
+               <input type="email" class="login-label__input input" name="email" placeholder="Е-mail" required>
+            </label>
+
+            <p class="login-or-register">Вспомнили пароль? <a href="login.html">Войти</a> </p>
+
+            <button class="recovery__btn btn">Восстановить пароль</button>
+
+         </div>
+      </div>
+
+   </div>
+
 </div>
+<script>
+
+</script>
 	</div>
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <!--<script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU"></script>-->

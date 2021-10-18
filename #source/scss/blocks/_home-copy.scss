@@ -1,0 +1,154 @@
+.home {
+   background-image: url(../img/home/home-bg.png);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+
+   @media (max-width:$md2+px) {
+      padding-top: 51px;
+   }
+
+   @media (min-width:$md2+px) {
+      padding-top: 81px;
+   }
+
+   &__container {
+      @media (min-width:$md3+px) {
+         max-width: 1111px;
+         padding-left: 48px;
+         padding-right: 48px;
+      }
+   }
+
+   &__subtitle {
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 12px;
+   }
+
+   &__btn {
+      color: $whiteColor;
+      background-color: $acentColor;
+
+      @media (max-width:$md2+px) {
+         font-size: 14px;
+         line-height: 18px;
+         padding: 16px 26px;
+      }
+
+      @media (min-width:$md2+px) {
+         font-size: 18px;
+         line-height: 22px;
+         padding: 21px 33px;
+      }
+   }
+
+   &-body {
+      @media (max-width:$md3+px) {
+         text-align: center;
+      }
+
+      @media (min-width:$md3+px) {
+         display: flex;
+         flex-wrap: wrap;
+         align-items: flex-start;
+      }
+   }
+
+   &-col {
+      position: relative;
+
+      @media (max-width:$md3+px) {
+         &:first-child {
+            margin-bottom: 18px;
+            text-align: left;
+         }
+      }
+
+      @media (min-width:$md3+px) {
+         flex-grow: 1;
+
+         &:first-child {
+            padding-top: 60px;
+         }
+      }
+
+      @media (min-width:$md2+px) {
+         &:first-child {
+            padding-top: 105px;
+         }
+      }
+
+      img {
+         @media (max-width:$md3+px) {
+            max-width: 320px;
+         }
+      }
+   }
+
+   &__decor {
+      position: absolute;
+      width: 100px;
+      height: 90px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      animation: sheet 2s ease infinite;
+
+      @media (max-width:$md2+px) {
+         display: none;
+      }
+   }
+
+   &__decor-1 {
+      background-image: url(../img/home/sheet-01.png);
+      right: -30px;
+      top: 150px;
+   }
+
+   &__decor-2 {
+      background-image: url(../img/home/sheet-02.png);
+      left: 50%;
+      bottom: 28%;
+      width: 142px;
+
+      @media (max-width:$md3+px) {
+         display: none;
+      }
+   }
+
+   &__decor-3 {
+      background-image: url(../img/home/sheet-03.png);
+      top: 29px;
+      left: 42px;
+
+      @media (max-width:$md3+px) {
+         top: 84px;
+      }
+   }
+
+   &__decor-4 {
+      background-image: url(../img/home/sheet-04.png);
+      bottom: -36px;
+      right: -42px;
+      height: 70px;
+      animation: unset;
+   }
+}
+
+@media (min-width:$md1+px) {
+
+   @keyframes sheet {
+      0% {
+         transform: translateY(0);
+      }
+
+      50% {
+         transform: translateY(-10px);
+      }
+
+      100% {
+         transform: translateY(0);
+      }
+   }
+}

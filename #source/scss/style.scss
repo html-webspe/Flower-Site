@@ -13,8 +13,8 @@
 //</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
 html {
   box-sizing: border-box;
-  scroll-behavior: smooth;
   height: 100%;
+  scroll-behavior: auto !important;
 }
 
 * {
@@ -69,11 +69,6 @@ body {
   background-color: $bodyColor;
   margin: 0;
   height: 100%;
-
-  @media (max-width:1200px) {
-    font-size: 16px;
-    line-height: 18px;
-  }
 }
 
 .container {
@@ -129,6 +124,15 @@ main {
   font-weight: 600;
 }
 
+.tab-item-body {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
+
 //</ОСНОВНАЯ СЕТКА>===========================================================================================================
 
 
@@ -136,27 +140,44 @@ main {
 @import "ui/_ui";
 @import "ui/_scrollbar";
 @import "ui/_btn";
-@import "ui/_simple-greed.scss";
 @import "ui/_range.scss";
-@import "ui/_modal.scss";
+@import "ui/_pagging.scss";
 
-@import "blocks/_quick-order";
-
-@import "blocks/_title";
-@import "blocks/_header";
-@import "blocks/_select";
-@import "blocks/_category-slider";
-@import "blocks/_search";
-@import "blocks/_home";
 @import "blocks/_section";
-@import "blocks/_product";
-@import "blocks/_reange";
+@import "blocks/_title";
+@import "blocks/_select";
 
 
+@import "blocks/_header-copy";
+@import "blocks/_home-copy";
+@import "blocks/_category-slider-copy";
+@import "blocks/_product-copy";
 @import "blocks/_footer";
 
 
-@import "card/_card";
+
+@import "card/_card-copy";
+
+
+
+
+
+
+
+
+@import "blocks/_quick-order";
+
+@import "blocks/_reange";
+
+
+
+
+
+
 @import "delivery/_delivery";
 @import "catalog/_page-catalog";
 @import "checkout/_checkout";
+
+@import "login-regist/_login-register";
+
+@import "ui/_modal.scss";

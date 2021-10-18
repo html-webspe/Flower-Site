@@ -6,7 +6,7 @@
    }
 
    @media (min-width:$md1+px) {
-      margin-bottom: 85px;
+      margin-bottom: 70px;
    }
 
    &__head {
@@ -26,15 +26,41 @@
    }
 
    &__action {
-      @media (min-width:1700px) {
-         margin-right: -140px;
-      }
+      display: flex;
+      align-items: center;
 
       span {
-         margin-right: 32px;
+         font-weight: 500;
+         font-size: 14px;
+         line-height: 17px;
+         margin-right: 16px;
       }
+   }
+}
 
-      display: flex;
-      align-items:center;
+.favorite {
+   position: absolute;
+   top: 18px;
+   right: 18px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 38px;
+   height: 38px;
+   border-radius: 50%;
+   background-color: $whiteColor;
+   font-size: 32px;
+   z-index: 1;
+   cursor: pointer;
+
+   &:before {
+      font-size: 18px;
+   }
+
+   &.icon-favorite-add {
+
+      &:before {
+         color: $acentColor;
+      }
    }
 }

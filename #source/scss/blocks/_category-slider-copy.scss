@@ -1,0 +1,123 @@
+.category {
+   margin-bottom: 64px;
+
+   &__container {
+      max-width: 1230px;
+   }
+
+   .swiper-container {
+      @media (min-width:$md4+px) {
+         padding: 0 11px;
+      }
+   }
+
+   &__slider {
+
+      @media (max-width:$md3+px) {
+         padding-left: 60px;
+         padding-right: 60px;
+      }
+
+      @media (min-width:$md3+px) {
+         padding-left: 95px;
+         padding-right: 95px;
+      }
+   }
+}
+
+@media (max-width:$md3+px) {
+   .category__slider-container {
+      overflow: visible !important;
+
+      .slider__item {
+         opacity: 0;
+         z-index: -1;
+      }
+
+      .swiper-slide-active {
+         opacity: 1;
+         z-index: 0;
+      }
+
+      @media (min-width:440px) {
+         .swiper-slide-next {
+            opacity: 1;
+            z-index: 0;
+         }
+      }
+   }
+}
+
+.slider {
+   position: relative;
+
+   &__wrapper {
+      padding: 23px 0;
+   }
+
+   &__item {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      justify-content: center;
+      height: auto !important;
+      padding-bottom: 17px;
+      background: $sliderItemColor;
+      box-shadow: 7px 7px 10px rgba(177, 164, 212, 0.35), -10px -10px 10px rgba(255, 255, 255, 0.15);
+      border-radius: 25px;
+      text-align: center;
+
+      &:hover {
+         transition: box-shadow 0.5s ease 0s;
+         box-shadow: 15px 15px 20px rgba(177, 164, 212, 0.35), -10px -10px 10px rgba(255, 255, 255, 0.15);
+      }
+
+   }
+
+   &__item-img {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+   }
+
+   &__item-img-box {
+      display: flex;
+      align-items: center;
+
+   }
+
+   &__title {
+      font-weight: 500;
+   }
+
+   &__button-prev,
+   &__button-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 3;
+
+      &:before {
+         @media (min-width:$md3+px) {
+            font-size: 18px;
+         }
+      }
+   }
+
+   &__button-prev {
+      left: 0;
+      padding-right: 2px;
+
+
+
+      &:before {
+         transform: rotate(90deg);
+      }
+   }
+
+   &__button-next {
+      right: 0;
+      padding-left: 2px;
+
+   }
+}

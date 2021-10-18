@@ -6,12 +6,16 @@
    }
 
    @media (min-width:$md3+px) {
-      padding-top: 88px;
-      padding-bottom: 118px;
+      padding-top: 66px;
+      padding-bottom: 77px;
+   }
+
+   &__container {
+      max-width: 1155px;
    }
 
    &__logo {
-      margin-bottom: 57px;
+      margin-bottom: 45px;
 
       @media (max-width:$md3+px) {
          text-align: center;
@@ -22,7 +26,14 @@
       max-width: 1523px;
       margin: 0 auto;
       color: $whiteColor;
-      font-size: 22px;
+      font-size: 18px;
+      line-height: 24px;
+
+
+      @media (max-width:$md2+px) {
+         font-size: 14px;
+         line-height: 16px;
+      }
 
 
 
@@ -38,14 +49,14 @@
    &__body-inner {
       display: flex;
 
-      @media (max-width:1300px) {
+      @media (max-width:1200px) {
          flex-direction: column-reverse;
       }
    }
 
    &__map {
-      flex: 0 0 448px;
-      min-height: 388px;
+      flex: 0 0 366px;
+      min-height: 291px;
       position: relative;
 
 
@@ -53,8 +64,8 @@
          margin-bottom: 48px;
       }
 
-      @media (min-width:1300px) {
-         margin-right: 104px;
+      @media (min-width:1200px) {
+         margin-right: 40px;
       }
    }
 
@@ -91,21 +102,28 @@
 
       @media (max-width:$md3+px) {
          &:not(:last-child) {
-            margin-bottom: 70px;
+            margin-bottom: 60px;
          }
       }
 
    }
 
    &__title {
+      font-size: 20px;
+      line-height: 24px;
       font-weight: 600;
-      font-size: 27px;
-      line-height: 33px;
       text-transform: uppercase;
       margin-bottom: 24px;
 
+      @media (max-width:$md2+px) {
+         font-size: 16px;
+         line-height: 18px;
+      }
+
+
       &+p {
          margin-bottom: 49px;
+
       }
    }
 
@@ -125,5 +143,9 @@
 
    &__social {
       margin: 0;
+
+      .social__list {
+         display: flex;
+      }
    }
 }

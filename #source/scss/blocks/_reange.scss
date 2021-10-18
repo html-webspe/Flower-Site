@@ -13,7 +13,7 @@ input[type=number] {
 .search-filters {
    display: none;
    position: absolute;
-   right: -98px;
+   right: -34px;
    top: 44px;
    width: 450px;
    height: 205px;
@@ -29,18 +29,16 @@ input[type=number] {
    }
 }
 
-.select-form__group--block {
+.select-form__group--price {
    display: flex;
    align-items: center;
    justify-content: center;
+   flex-direction: row-reverse;
    cursor: pointer;
+   font-size: 14px;
 
-   @media (min-width:$md3+px) {
+   @media (min-width:$md2+px) {
       font-size: 18px;
-   }
-
-   @media (min-width:$md1+px) {
-      font-size: 24px;
    }
 
    @media (max-width:$md3+px) {
@@ -53,36 +51,32 @@ input[type=number] {
       justify-content: space-between;
    }
 
-   span {
+   &:before {
+      font-size: 14px;
+      margin-left: 18px;
+      transition: transform 0.3s;
+   }
+
+   &.active {
+
+
       &:before {
-         font-size: 14px;
-         margin-left: 18px;
+         transform: rotate(180deg);
       }
    }
 }
 
 .select-form__group--filters {
-   @media (min-width:$md3+px) {
-      width: 12%;
-   }
 
-   @media (min-width:$md1+px) {
-      width: 9%;
-   }
 
    &.active {
       .search-filters {
          display: block;
       }
 
-      .filters__btn {
-         &:before {
-            transition: transform 0.3s ease 0s;
-            transform: rotate(180deg);
-         }
-      }
    }
 }
+
 
 .filters-price {
 
