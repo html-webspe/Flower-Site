@@ -431,3 +431,5 @@ function inc(Obj, Val) {
 };
 
 //====================  /Product-count ========================//
+
+$(".scroll").niceScroll();

@@ -140,8 +140,8 @@ main {
 @import "ui/_ui";
 @import "ui/_scrollbar";
 @import "ui/_btn";
-@import "ui/_range.scss";
 @import "ui/_pagging.scss";
+@import "blocks/_reange";
 
 @import "blocks/_section";
 @import "blocks/_title";
@@ -155,29 +155,20 @@ main {
 @import "blocks/_footer";
 
 
+@import "catalog/_page-catalog";
+
 
 @import "card/_card-copy";
+@import "delivery/_delivery-copy";
+@import "checkout/_checkout-copy";
 
 
 
-
-
-
+@import "login-regist/_login-register";
+@import "constructor/_constructor";
 
 
 @import "blocks/_quick-order";
 
-@import "blocks/_reange";
-
-
-
-
-
-
-@import "delivery/_delivery";
-@import "catalog/_page-catalog";
-@import "checkout/_checkout";
-
-@import "login-regist/_login-register";
 
 @import "ui/_modal.scss";

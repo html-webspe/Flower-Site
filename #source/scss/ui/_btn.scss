@@ -7,6 +7,7 @@
    line-height: 16px;
    font-weight: bold;
    color: $acentColor;
+   text-align: center;
    border-radius: 50px;
    box-shadow: 10px 10px 20px rgba(177, 164, 212, 0.35);
    transition: background-color 0.3s ease 0s;
@@ -16,6 +17,10 @@
    &:hover {
       background-color: $acentColor;
       color: $whiteColor;
+   }
+
+   &.fw {
+      width: 100%;
    }
 }
 
@@ -50,6 +55,17 @@
    &:hover {
       box-shadow: 10px 10px 20px rgba(230, 107, 105, 0.35), -10px -10px 10px rgba(255, 255, 255, 0.15);
       transition: box-shadow 0.5s ease 0s;
+   }
+}
+
+.btn-acent {
+   background-color: $acentColor;
+   color: $whiteColor;
+
+   &:hover {
+      border: 1px solid $acentColor;
+      background-color: $whiteColor;
+      color: $acentColor;
    }
 }
 

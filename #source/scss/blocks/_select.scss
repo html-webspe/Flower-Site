@@ -58,8 +58,6 @@
    }
 
    &__btn {
-      background-color: $acentColor;
-      color: $whiteColor;
 
       @media (max-width:$md2+px) {
          font-size: 14px;

@@ -275,19 +275,12 @@
    }
 
    &__item {
+      font-size: 14px;
       background: #FAFAFA;
       box-shadow: 10px 10px 20px rgba(177, 164, 212, 0.35), -10px -10px 10px rgba(255, 255, 255, 0.15);
       border-radius: 150px;
       color: #000;
-
-
-      @media (max-width:$md5+px) {
-         padding: 9px 12px;
-      }
-
-      @media (min-width:$md5+px) {
-         padding: 15px 18px;
-      }
+      padding: 8px 12px;
 
       &:not(:last-child) {
          margin-right: 15px;
