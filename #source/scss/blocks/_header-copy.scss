@@ -49,7 +49,7 @@
 .location {
    cursor: pointer;
 
-   @media (max-width:$md3+px) {
+   @media (max-width:800px) {
       color: $whiteColor;
       margin-bottom: 29px;
    }

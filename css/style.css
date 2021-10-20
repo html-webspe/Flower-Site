@@ -1369,7 +1369,7 @@ input[type=number] {
 
 .location {
   cursor: pointer; }
-  @media (max-width: 767.98px) {
+  @media (max-width: 800px) {
     .location {
       color: #fff;
       margin-bottom: 29px; } }
