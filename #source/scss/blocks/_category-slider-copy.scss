@@ -17,6 +17,7 @@
          padding-left: 60px;
          padding-right: 60px;
       }
+
       @media (max-width:$md3+px) {
          padding-left: 34px;
          padding-right: 34px;
@@ -58,10 +59,7 @@
    }
 
    &__item {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      justify-content: center;
+
       height: auto !important;
       padding-bottom: 17px;
       background: $sliderItemColor;
@@ -74,6 +72,14 @@
          box-shadow: 15px 15px 20px rgba(177, 164, 212, 0.35), -10px -10px 10px rgba(255, 255, 255, 0.15);
       }
 
+   }
+
+   &__item-link {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      justify-content: center;
+      height: 100%;
    }
 
    &__item-img {
