@@ -2083,6 +2083,9 @@ input[type=number] {
         width: 100%;
         max-height: 320px;
         margin-bottom: 24px; } }
+    @media (min-width: 992.98px) {
+      .card__slider-block {
+        width: 315px; } }
     .card__slider-block img {
       border-radius: 35px; }
 
@@ -2912,7 +2915,7 @@ input[type=number] {
   @media (max-width: 992.98px) {
     .postal__col {
       margin-bottom: 16px; } }
-  @media (min-width: 800px) {
+  @media (min-width: 767.98px) {
     .postal__col {
       -webkit-box-flex: 1;
       -ms-flex: 1 1 42%;
@@ -3420,6 +3423,14 @@ input[type=number] {
   @media (min-width: 767.98px) {
     .main-constructor .product__item {
       margin-bottom: 32px; } }
+  @media (max-width: 767.98px) {
+    .main-constructor .product__item {
+      width: 230px !important;
+      margin-left: auto;
+      margin-right: auto; } }
+  @media (max-width: 576.98px) {
+    .main-constructor .product__wrapper {
+      margin-left: 0; } }
   .main-constructor .form {
     margin-bottom: 40px;
     margin-top: unset; }
@@ -3692,7 +3703,8 @@ input[type=number] {
     @media (max-width: 767.98px) {
       .quick-order__product-item--name {
         font-size: 22px;
-        line-height: 26px; } }
+        line-height: 26px;
+        text-align: center; } }
   .quick-order__text {
     margin-bottom: 37px;
     text-align: center; }

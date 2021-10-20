@@ -7,6 +7,21 @@
       }
    }
 
+   @media (max-width:$md3+px) {
+      .product__item {
+         width: 230px !important;
+         margin-left: auto;
+         margin-right: auto;
+      }
+   }
+
+   @media (max-width:$md4+px) {
+      .product__wrapper {
+         margin-left: 0;
+      }
+   }
+
+
    .form {
       margin-bottom: 40px;
       margin-top: unset;
