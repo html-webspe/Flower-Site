@@ -2014,8 +2014,6 @@ input[type=number] {
   padding-left: 15px;
   padding-right: 15px;
   margin-bottom: 132px; }
-  .main-card .product__wrapper {
-    margin-right: 0; }
 
 .card {
   display: -webkit-box;
@@ -2083,6 +2081,9 @@ input[type=number] {
         width: 100%;
         max-height: 320px;
         margin-bottom: 24px; } }
+    @media (min-width: 576.98px) {
+      .card__slider-block {
+        width: 226px; } }
     @media (min-width: 992.98px) {
       .card__slider-block {
         width: 315px; } }
