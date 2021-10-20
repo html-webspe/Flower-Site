@@ -11,26 +11,12 @@
    }
 
    .product__item {
-      @media (min-width:1200px) {
+      @media (min-width:$md4+px) {
          margin-bottom: 32px;
       }
    }
 
    .select-form {
       margin-bottom: 89px;
-   }
-
-   @media (max-width:$md4+px) {
-      .product__wrapper {
-
-         display: flex;
-         justify-content: space-around;
-         flex-wrap: wrap;
-         margin-left: 0;
-      }
-
-      .product__item {
-         margin-bottom: 32px;
-      }
    }
 }

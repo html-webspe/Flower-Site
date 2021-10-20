@@ -43,17 +43,18 @@ if (iconMenu) {
 
 if (document.querySelector('.category__slider-container')) {
    let categorySLider = new Swiper('.category__slider-container', {
-      slidesPerView: 1,
+      slidesPerView: 2,
       loop: true,
       observer: true,
       observeParents: true,
+      spaceBetween: 15,
       breakpoints: {
-         440: {
-            slidesPerView: 2,
+         400: {
+            slidesPerView: 3,
             spaceBetween: 30
          },
          768: {
-            slidesPerView: 2,
+            slidesPerView: 3,
             spaceBetween: 40
          },
          900: {

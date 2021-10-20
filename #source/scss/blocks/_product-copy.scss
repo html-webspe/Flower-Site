@@ -13,10 +13,13 @@
       @media (min-width:$md4+px) {
          display: flex;
          flex-wrap: wrap;
+         align-items: flex-start;
       }
 
       @media (min-width:$md4+px) and (max-width:$md2+px) {
          justify-content: space-around;
+         max-width: 70%;
+         margin: 0 auto;
       }
 
       @media (min-width:$md2+px) {
@@ -35,10 +38,6 @@
 
       @media (min-width:$md4+px) {
          width: 230px;
-
-         &:not(:last-child) {
-            margin-right: 10px;
-         }
       }
 
       @media (max-width:$md2+px) {

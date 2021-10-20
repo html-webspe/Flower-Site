@@ -17,6 +17,10 @@
          padding-left: 60px;
          padding-right: 60px;
       }
+      @media (max-width:$md3+px) {
+         padding-left: 34px;
+         padding-right: 34px;
+      }
 
       @media (min-width:$md3+px) {
          padding-left: 95px;
@@ -25,7 +29,7 @@
    }
 }
 
-@media (max-width:$md3+px) {
+@media (max-width:$md4+px) {
    .category__slider-container {
       overflow: visible !important;
 
@@ -39,11 +43,9 @@
          z-index: 0;
       }
 
-      @media (min-width:440px) {
-         .swiper-slide-next {
-            opacity: 1;
-            z-index: 0;
-         }
+      .swiper-slide-next {
+         opacity: 1;
+         z-index: 0;
       }
    }
 }
@@ -96,6 +98,22 @@
       top: 50%;
       transform: translateY(-50%);
       z-index: 3;
+      justify-content: center;
+      border-radius: 50%;
+      background-color: $btnActionColor;
+      box-shadow: 10px 10px 20px rgba(177, 164, 212, 0.35), -10px -10px 10px rgba(255, 255, 255, 0.15);
+
+      @media (max-width:$md3+px) {
+         width: 26px;
+         height: 26px;
+         flex: 0 0 26px;
+      }
+
+      @media (min-width:$md3+px) {
+         width: 40px;
+         height: 40px;
+         flex: 0 0 40px;
+      }
 
       &:before {
          @media (min-width:$md3+px) {
