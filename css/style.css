@@ -1993,11 +1993,21 @@ input[type=number] {
     padding-top: 112px; } }
 
 @media (min-width: 576.98px) {
-  .page-catalog .product__item {
+  .page-catalog__main .product__item {
     margin-bottom: 32px; } }
 
-.page-catalog .select-form {
+.page-catalog__main .select-form {
   margin-bottom: 89px; }
+
+@media (max-width: 767.98px) {
+  .page-catalog__main .product__item {
+    width: 230px !important;
+    margin-left: auto;
+    margin-right: auto; } }
+
+@media (max-width: 576.98px) {
+  .page-catalog__main .product__wrapper {
+    margin-left: 0; } }
 
 .main-card {
   padding-top: 75px;

@@ -1,13 +1,10 @@
-.page-catalog {
+.page-catalog__main {
+   @media (max-width:$md1+px) {
+      padding-top: 60px;
+   }
 
-   &__main {
-      @media (max-width:$md1+px) {
-         padding-top: 60px;
-      }
-
-      @media (min-width:$md1+px) {
-         padding-top: 112px;
-      }
+   @media (min-width:$md1+px) {
+      padding-top: 112px;
    }
 
    .product__item {
@@ -18,5 +15,19 @@
 
    .select-form {
       margin-bottom: 89px;
+   }
+
+   @media (max-width:$md3+px) {
+      .product__item {
+         width: 230px !important;
+         margin-left: auto;
+         margin-right: auto;
+      }
+   }
+
+   @media (max-width:$md4+px) {
+      .product__wrapper {
+         margin-left: 0;
+      }
    }
 }
