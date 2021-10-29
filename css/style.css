@@ -601,44 +601,47 @@ input {
 
 
 */
-.pagging {
-  margin-top: 54px; }
+/*.pagging {
+  margin-top: 54px;
+}
 
 .pagging__inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+}
 
-.pagging__arrow:before {
-  color: #F49D9C;
-  font-size: 16px; }
+.pagging__arrow {
 
-.pagging__arrow-prev {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg); }
+  &:before {
+    color: $acentColor;
+    font-size: 16px;
+  }
 
-.pagging__arrow-next {
-  -webkit-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  transform: rotate(-90deg); }
+  &-prev {
+    transform: rotate(90deg);
+  }
+
+  &-next {
+    transform: rotate(-90deg);
+  }
+}
 
 .pagging-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-  .pagging-list li {
-    margin: 0px 5px; }
-  .pagging-list li.active a {
-    background-color: #F49D9C;
-    color: #ffffff;
-    padding: 1px 5px; }
+  display: flex;
+
+  li {
+    margin: 0px 5px;
+  }
+
+  li.active {
+    a {
+      background-color: $acentColor;
+      color: #ffffff;
+      padding: 1px 5px;
+    }
+  }
+}
 
 .pagging__link {
   color: #7c7373;
@@ -646,13 +649,33 @@ input {
   font-weight: 400;
   line-height: 35px;
   padding: 0 7px;
-  -webkit-transition: background-color 0.3s;
-  -o-transition: background-color 0.3s;
-  transition: background-color 0.3s; }
-  .pagging__link:hover {
-    background-color: #F49D9C;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: $acentColor;
     color: #ffffff;
-    padding: 0 7px; }
+    padding: 0 7px;
+  }
+}*/
+.pagging-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.page-item {
+  font-size: 22px;
+  line-height: 24px; }
+  .page-item.disabled {
+    opacity: 0.5; }
+
+.pagging-list li {
+  margin: 0px 8px; }
+
+.page-link {
+  color: #F49D9C; }
 
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
@@ -1468,6 +1491,9 @@ input[type=number] {
   position: relative;
   width: 34px;
   height: 20px;
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
   cursor: pointer;
   z-index: 5; }
   .header-menu__icon:before, .header-menu__icon:after,
@@ -2001,6 +2027,9 @@ input[type=number] {
 .page-catalog__main .select-form {
   margin-bottom: 89px; }
 
+.page-catalog__main .product__container {
+  padding-right: 15px; }
+
 @media (max-width: 767.98px) {
   .page-catalog__main .product__item {
     width: 230px !important;
@@ -2490,16 +2519,6 @@ input[type=number] {
 .main-checkout {
   padding-top: 72px;
   padding-bottom: 66px; }
-  @media (min-width: 576.98px) {
-    .main-checkout .product__item {
-      width: 176px; } }
-  .main-checkout .product__item-img {
-    height: 180px; }
-  .main-checkout .product__item-body {
-    padding: 13px; }
-  .main-checkout .product__item-btn {
-    font-size: 10px;
-    padding: 8px 11px; }
 
 .basket__title {
   margin-bottom: 29px; }
@@ -2515,7 +2534,7 @@ input[type=number] {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; } }
 
-@media (min-width: 1400px) {
+@media (min-width: 992.98px) {
   .basket__body {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
@@ -3437,7 +3456,7 @@ input[type=number] {
   .main-constructor .form {
     margin-bottom: 40px;
     margin-top: unset; }
-  @media (min-width: 767.98px) {
+  @media (min-width: 992.98px) {
     .main-constructor .select-form__inner {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -3451,10 +3470,18 @@ input[type=number] {
   .main-constructor .select-form__body {
     -webkit-box-flex: 1;
     -ms-flex: 1;
-    flex: 1;
-    margin-left: 26px;
-    margin-right: 26px; }
-  @media (min-width: 767.98px) {
+    flex: 1; }
+    @media (min-width: 767.98px) and (max-width: 992.98px) {
+      .main-constructor .select-form__body {
+        margin-bottom: 18px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%; } }
+    @media (min-width: 992.98px) {
+      .main-constructor .select-form__body {
+        margin-left: 26px;
+        margin-right: 26px; } }
+  @media (min-width: 992.98px) {
     .main-constructor .select-form__title {
       margin-bottom: 0; } }
   .main-constructor .select-form__btn {

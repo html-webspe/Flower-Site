@@ -2,26 +2,6 @@
    padding-top: 72px;
    padding-bottom: 66px;
 
-
-   @media (min-width:$md4+px) {
-      .product__item {
-         width: 176px;
-      }
-   }
-
-   .product__item-img {
-      height: 180px;
-   }
-
-   .product__item-body {
-      padding: 13px;
-   }
-
-   .product__item-btn {
-      font-size: 10px;
-      padding: 8px 11px;
-   }
-   
 }
 
 
@@ -37,7 +17,7 @@
          flex-wrap: wrap;
       }
 
-      @media (min-width:$md1+px) {
+      @media (min-width:$md2+px) {
          justify-content: space-between;
       }
    }

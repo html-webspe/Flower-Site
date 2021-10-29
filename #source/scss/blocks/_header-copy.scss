@@ -181,8 +181,10 @@
    position: relative;
    width: 34px;
    height: 20px;
+   order: 1;
    cursor: pointer;
    z-index: 5;
+
 
    &:before,
    &:after,

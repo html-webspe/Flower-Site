@@ -193,9 +193,9 @@ if (rangeSlider) {
 /*====================   Product Slider  ====================*/
 
 function resizeScrenn() {
+   let productItem = document.querySelectorAll('.product__item');
+   let productWrapper = document.querySelectorAll('.product__wrapper')
    if ($(window).width() < 576.98) {
-      let productItem = document.querySelectorAll('.product__item');
-      let productWrapper = document.querySelectorAll('.product__wrapper')
 
       if ($(".product__container-slider").length > 0) {
          document.querySelector('.product__container-slider').classList.add('swiper-container');
@@ -214,6 +214,15 @@ function resizeScrenn() {
          })
       }
 
+   }
+   else {
+      document.querySelector('.product__container-slider').classList.remove('swiper-container');
+      productWrapper.forEach((el) => {
+         el.classList.remove('swiper-wrapper');
+      })
+      productItem.forEach((el) => {
+         el.classList.remove('swiper-slide');
+      })
    }
 }
 resizeScrenn();

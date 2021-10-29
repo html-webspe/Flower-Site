@@ -21,6 +21,11 @@
       }
    }
 
+   .select-title {}
+
+   .select-form {
+      @media (max-width:$md2+px) {}
+   }
 
    .form {
       margin-bottom: 40px;
@@ -29,7 +34,7 @@
 
    .select-form__inner {
 
-      @media (min-width:$md3+px) {
+      @media (min-width:$md2+px) {
          display: flex;
          align-items: center;
          justify-content: space-between;
@@ -38,11 +43,21 @@
 
    .select-form__body {
       flex: 1;
-      margin-left: 26px;
-      margin-right: 26px;
+
+      @media (min-width:$md3+px) and (max-width:$md2+px) {
+         margin-bottom: 18px;
+         margin-left: auto;
+         margin-right: auto;
+         width: 70%;
+      }
+
+      @media (min-width:$md2+px) {
+         margin-left: 26px;
+         margin-right: 26px;
+      }
    }
 
-   @media (min-width:$md3+px) {
+   @media (min-width:$md2+px) {
       .select-form__title {
          margin-bottom: 0;
       }

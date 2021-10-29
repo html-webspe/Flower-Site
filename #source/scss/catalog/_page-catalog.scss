@@ -17,6 +17,10 @@
       margin-bottom: 89px;
    }
 
+   .product__container {
+      padding-right: 15px;
+   }
+
    @media (max-width:$md3+px) {
       .product__item {
          width: 230px !important;

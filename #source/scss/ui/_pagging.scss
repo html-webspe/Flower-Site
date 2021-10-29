@@ -1,4 +1,4 @@
-.pagging {
+/*.pagging {
   margin-top: 54px;
 }
 
@@ -53,4 +53,25 @@
     color: #ffffff;
     padding: 0 7px;
   }
+}*/
+.pagging-list {
+  display: flex;
+  justify-content: center;
+}
+
+.page-item {
+  font-size: 22px;
+  line-height: 24px;
+
+  &.disabled {
+    opacity: 0.5;
+  }
+}
+
+.pagging-list li {
+  margin: 0px 8px;
+}
+
+.page-link {
+  color: $acentColor;
 }
